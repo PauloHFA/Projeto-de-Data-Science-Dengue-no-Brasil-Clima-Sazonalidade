@@ -1,0 +1,64 @@
+[build-system]
+requires = ["hatchling>=1.21.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "dengue-clima"
+version = "0.1.0"
+description = "Projeto de Data Science: Dengue no Brasil – Clima, Sazonalidade e Previsão de Casos"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Equipe Data Science Dengue" }]
+dependencies = [
+    "pandas>=2.1.0",
+    "numpy>=1.26.0",
+    "pyarrow>=14.0.0",
+    "pandera>=0.18.0",
+    "epiweeks>=2.3.0",
+    "requests>=2.31.0",
+    "scipy>=1.11.0",
+    "statsmodels>=0.14.1",
+    "scikit-learn>=1.4.0",
+    "lightgbm>=4.3.0",
+    "matplotlib>=3.8.0",
+    "seaborn>=0.13.0",
+    "plotly>=5.18.0",
+]
+
+[project.optional-dependencies]
+ingestao = [
+    "pysus>=0.12.0",
+]
+geo = [
+    "geopandas>=0.14.0",
+    "shapely>=2.0.0",
+    "libpysal>=4.9.0",
+    "esda>=2.5.0",
+    "folium>=0.15.0",
+]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-cov>=4.1.0",
+    "ruff>=0.3.0",
+    "pre-commit>=3.6.0",
+]
+
+[project.scripts]
+dengue-pipeline = "dengue.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/dengue"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-v --tb=short"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
