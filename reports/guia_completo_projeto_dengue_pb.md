@@ -198,3 +198,4 @@ python -m pytest tests/
 ```
 
 Todos os dados brutos e derivados permanecem certificados pelo [`data/raw/manifesto_hashes.json`](file:///c:/Projetos/Projeto%20de%20Data%20Science%20Dengue/data/raw/manifesto_hashes.json).
+
