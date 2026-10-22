@@ -1,224 +1,224 @@
-municipio_ibge7,municipio,nome_municipio,mesorregiao,incidencia_100k,local_moran_i,p_valor_lisa,cluster_lisa,lag_espacial
-2500106,,,,,0.0015,0.975,Não Significante,-0.1151
-2500205,,,,,-0.0055,0.398,Não Significante,0.407
-2500304,,,,,0.0018,0.496,Não Significante,-0.1314
-2500403,,,,,0.0019,0.314,Não Significante,-0.1445
-2500502,,,,,0.0086,0.254,Não Significante,-0.6424
-2500536,,,,,0.0015,0.971,Não Significante,-0.1151
-2500577,,,,,0.0019,0.366,Não Significante,-0.1396
-2500601,,,,,0.0138,0.18,Não Significante,-1.0313
-2500700,,,,,-0.0147,0.123,Não Significante,1.1008
-2500734,,,,,0.0015,0.981,Não Significante,-0.1151
-2500775,,,,,-0.0161,0.138,Não Significante,1.2047
-2500809,,,,,0.0056,0.394,Não Significante,-0.4167
-2500908,,,,,0.0019,0.346,Não Significante,-0.1396
-2501005,,,,,0.0004,0.995,Não Significante,-0.0266
-2501104,250110,Areia,Agreste Paraibano,11.609147984644911,0.0035,0.959,Não Significante,-0.1151
-2501153,,,,,0.0015,0.957,Não Significante,-0.1151
-2501203,,,,,0.0015,0.97,Não Significante,-0.1151
-2501302,,,,,0.0015,0.955,Não Significante,-0.1151
-2501351,,,,,0.0015,0.962,Não Significante,-0.1151
-2501401,,,,,0.0015,0.973,Não Significante,-0.1151
-2501500,,,,,0.0015,0.971,Não Significante,-0.1151
-2501534,,,,,0.0001,1.0,Não Significante,-0.0045
-2501575,,,,,0.0015,0.961,Não Significante,-0.1151
-2501609,,,,,0.0008,0.998,Não Significante,-0.0598
-2501708,,,,,-0.0326,0.057,Não Significante,2.4368
-2501807,250180,Bayeux,Mata Paraibana,1.6684677543186182,-0.3179,0.119,Não Significante,0.2677
-2501906,,,,,0.0015,0.961,Não Significante,-0.1151
-2502003,,,,,0.0054,0.19,Não Significante,-0.4005
-2502052,,,,,0.0015,0.977,Não Significante,-0.1151
-2502102,,,,,-0.0142,0.191,Não Significante,1.0597
-2502151,,,,,-0.0124,0.206,Não Significante,0.9244
-2502201,,,,,-0.0176,0.146,Não Significante,1.3117
-2502300,,,,,0.0015,0.97,Não Significante,-0.1151
-2502409,,,,,0.0015,0.968,Não Significante,-0.1151
-2502508,,,,,-0.0144,0.19,Não Significante,1.0729
-2502607,,,,,-0.0142,0.219,Não Significante,1.0597
-2502706,,,,,0.0015,0.964,Não Significante,-0.1151
-2502805,,,,,0.0044,0.263,Não Significante,-0.3292
-2502904,,,,,0.0054,0.194,Não Significante,-0.4005
-2503001,,,,,0.0015,0.97,Não Significante,-0.1151
-2503100,250310,Cabaceiras,Borborema,27.06754299424184,-0.2036,0.333,Não Significante,-0.1151
-2503209,250320,Cabedelo,Mata Paraibana,14.428058925143953,0.0797,0.142,Não Significante,0.2677
-2503308,,,,,-0.0367,0.084,Não Significante,2.7384
-2503407,,,,,0.0176,0.145,Não Significante,-1.3127
-2503506,,,,,0.0006,0.998,Não Significante,-0.0414
-2503555,,,,,0.0015,0.955,Não Significante,-0.1151
-2503605,,,,,0.0015,0.951,Não Significante,-0.1151
-2503704,250370,Cajazeiras,Sertao Paraibano,17.463309404990405,-0.0749,0.959,Não Significante,-0.1151
-2503753,,,,,0.0012,0.975,Não Significante,-0.0906
-2503803,,,,,0.0015,0.954,Não Significante,-0.1151
-2503902,,,,,-0.0905,0.019,Baixo-Alto (Anomalia),6.758
-2504009,250400,Campina Grande,Agreste Paraibano,4.760805758157389,0.0953,0.943,Não Significante,-0.1151
-2504033,,,,,0.0298,0.044,Baixo-Baixo (Coldspot),-2.2209
-2504074,,,,,0.0015,0.972,Não Significante,-0.1151
-2504108,,,,,0.0015,0.974,Não Significante,-0.1151
-2504157,,,,,0.0015,0.946,Não Significante,-0.1151
-2504207,,,,,0.0122,0.189,Não Significante,-0.9135
-2504306,250430,Catolé do Rocha,Sertao Paraibano,10.900024184261035,0.013,0.964,Não Significante,-0.1151
-2504355,,,,,0.0203,0.151,Não Significante,-1.5142
-2504405,,,,,0.0015,0.963,Não Significante,-0.1151
-2504504,,,,,0.011,0.203,Não Significante,-0.819
-2504603,,,,,-0.001,0.987,Não Significante,0.0763
-2504702,,,,,0.0015,0.961,Não Significante,-0.1151
-2504801,,,,,0.0013,0.979,Não Significante,-0.0941
-2504850,,,,,0.0015,0.967,Não Significante,-0.1151
-2504900,,,,,0.0138,0.182,Não Significante,-1.0313
-2505006,,,,,0.0015,0.969,Não Significante,-0.1151
-2505105,250510,Cuité,Agreste Paraibano,12.198599808061418,-0.0044,0.978,Não Significante,-0.1151
-2505204,,,,,0.0116,0.192,Não Significante,-0.8692
-2505238,,,,,0.0015,0.967,Não Significante,-0.1151
-2505279,,,,,0.017,0.121,Não Significante,-1.2656
-2505303,,,,,0.0015,0.953,Não Significante,-0.1151
-2505352,,,,,0.0001,1.0,Não Significante,-0.0045
-2505402,,,,,0.0015,0.968,Não Significante,-0.1151
-2505501,,,,,0.0015,0.977,Não Significante,-0.1151
-2505600,,,,,-0.0063,0.346,Não Significante,0.4723
-2505709,,,,,0.0015,0.958,Não Significante,-0.1151
-2505808,,,,,0.0015,0.962,Não Significante,-0.1151
-2505907,,,,,0.0013,0.962,Não Significante,-0.0941
-2506004,,,,,0.0019,0.35,Não Significante,-0.1396
-2506103,,,,,0.0172,0.172,Não Significante,-1.281
-2506202,,,,,0.0015,0.993,Não Significante,-0.1151
-2506251,,,,,0.0015,0.964,Não Significante,-0.1151
-2506301,250630,Guarabira,Agreste Paraibano,8.739725335892514,0.042,0.953,Não Significante,-0.1151
-2506400,,,,,0.0015,0.955,Não Significante,-0.1151
-2506509,,,,,-0.0278,0.06,Não Significante,2.0722
-2506608,,,,,0.0015,0.975,Não Significante,-0.1151
-2506707,,,,,0.0015,0.959,Não Significante,-0.1151
-2506806,,,,,0.0133,0.204,Não Significante,-0.9895
-2506905,,,,,0.0015,0.971,Não Significante,-0.1151
-2507002,250700,Itaporanga,Sertao Paraibano,16.45553742802303,-0.0614,0.956,Não Significante,-0.1151
-2507101,,,,,0.0231,0.087,Não Significante,-1.7258
-2507200,,,,,0.0015,0.961,Não Significante,-0.1151
-2507309,,,,,0.0231,0.106,Não Significante,-1.7258
-2507408,,,,,0.0035,0.335,Não Significante,-0.2578
-2507507,250750,João Pessoa,Mata Paraibana,17.10306084452975,-1.8965,0.033,Alto-Baixo (Anomalia),-3.1144
-2507606,,,,,0.0015,0.962,Não Significante,-0.1151
-2507705,,,,,0.0015,0.959,Não Significante,-0.1151
-2507804,,,,,0.0015,0.958,Não Significante,-0.1151
-2507903,,,,,0.0015,0.978,Não Significante,-0.1151
-2508000,,,,,0.0302,0.075,Não Significante,-2.2533
-2508109,,,,,0.0013,0.97,Não Significante,-0.0941
-2508208,,,,,0.0015,0.969,Não Significante,-0.1151
-2508307,,,,,0.0172,0.15,Não Significante,-1.281
-2508406,,,,,-0.0273,0.1,Não Significante,2.0354
-2508505,,,,,0.0015,0.958,Não Significante,-0.1151
-2508554,,,,,0.0015,0.983,Não Significante,-0.1151
-2508604,,,,,0.0322,0.091,Não Significante,-2.4057
-2508703,,,,,0.0015,0.957,Não Significante,-0.1151
-2508802,,,,,0.0176,0.143,Não Significante,-1.3127
-2508901,250890,Mamanguape,Mata Paraibana,3.7027483685220726,0.1094,0.956,Não Significante,-0.1151
-2509008,,,,,0.0015,0.96,Não Significante,-0.1151
-2509057,,,,,0.0015,0.978,Não Significante,-0.1151
-2509107,,,,,0.0015,0.966,Não Significante,-0.1151
-2509156,,,,,-0.0273,0.084,Não Significante,2.0354
-2509206,,,,,0.0149,0.154,Não Significante,-1.1144
-2509305,,,,,0.0375,0.072,Não Significante,-2.7996
-2509339,,,,,0.0015,0.965,Não Significante,-0.1151
-2509370,,,,,0.0038,0.28,Não Significante,-0.2863
-2509396,,,,,0.0015,0.982,Não Significante,-0.1151
-2509404,,,,,0.0015,0.963,Não Significante,-0.1151
-2509503,,,,,0.0015,0.964,Não Significante,-0.1151
-2509602,,,,,0.0015,0.975,Não Significante,-0.1151
-2509701,250970,Monteiro,Borborema,46.121564683301344,-0.4588,0.956,Não Significante,-0.1151
-2509800,,,,,0.0073,0.302,Não Significante,-0.546
-2509909,,,,,0.0015,0.966,Não Significante,-0.1151
-2510006,,,,,-0.0188,0.08,Não Significante,1.4047
-2510105,,,,,-0.0014,0.991,Não Significante,0.1061
-2510204,,,,,0.0302,0.058,Não Significante,-2.2533
-2510303,,,,,0.0015,0.977,Não Significante,-0.1151
-2510402,,,,,0.0015,0.959,Não Significante,-0.1151
-2510501,,,,,0.0015,0.967,Não Significante,-0.1151
-2510600,,,,,0.0015,0.978,Não Significante,-0.1151
-2510659,,,,,0.0015,0.95,Não Significante,-0.1151
-2510709,,,,,0.0015,0.964,Não Significante,-0.1151
-2510808,251080,Patos,Sertao Paraibano,4.570436852207295,0.0978,0.948,Não Significante,-0.1151
-2510907,,,,,0.0013,0.966,Não Significante,-0.0967
-2511004,,,,,-0.0063,0.342,Não Significante,0.4723
-2511103,,,,,0.0015,0.967,Não Significante,-0.1151
-2511202,,,,,0.0118,0.222,Não Significante,-0.8786
-2511301,,,,,-0.0075,0.295,Não Significante,0.5562
-2511400,,,,,0.0006,0.993,Não Significante,-0.0414
-2511509,,,,,0.0015,0.971,Não Significante,-0.1151
-2511608,,,,,0.0019,0.363,Não Significante,-0.1396
-2511707,,,,,0.0096,0.257,Não Significante,-0.7184
-2511806,,,,,0.0066,0.332,Não Significante,-0.4922
-2511905,,,,,0.0015,0.976,Não Significante,-0.1151
-2512002,,,,,0.0101,0.244,Não Significante,-0.751
-2512036,,,,,0.0015,0.968,Não Significante,-0.1151
-2512077,,,,,0.0015,0.969,Não Significante,-0.1151
-2512101,251210,Pombal,Sertao Paraibano,11.903414011516315,-0.0004,0.581,Não Significante,-0.1151
-2512200,,,,,-0.1136,0.02,Baixo-Alto (Anomalia),8.4762
-2512309,,,,,0.0206,0.101,Não Significante,-1.5406
-2512408,,,,,0.025,0.103,Não Significante,-1.864
-2512507,,,,,0.0172,0.144,Não Significante,-1.281
-2512606,,,,,0.0208,0.119,Não Significante,-1.5523
-2512705,,,,,0.002,0.232,Não Significante,-0.1519
-2512721,,,,,0.0015,0.972,Não Significante,-0.1151
-2512747,,,,,0.0015,0.976,Não Significante,-0.1151
-2512754,,,,,0.025,0.121,Não Significante,-1.864
-2512762,,,,,0.0015,0.974,Não Significante,-0.1151
-2512788,,,,,0.0015,0.97,Não Significante,-0.1151
-2512804,,,,,0.0038,0.299,Não Significante,-0.2863
-2512903,,,,,0.0257,0.066,Não Significante,-1.9201
-2513000,,,,,0.0015,0.963,Não Significante,-0.1151
-2513109,,,,,0.0015,0.974,Não Significante,-0.1151
-2513158,,,,,0.0015,0.977,Não Significante,-0.1151
-2513208,,,,,-0.0132,0.164,Não Significante,0.9847
-2513307,,,,,-0.0176,0.137,Não Significante,1.3117
-2513356,,,,,0.0015,0.993,Não Significante,-0.1151
-2513406,,,,,0.0015,0.964,Não Significante,-0.1151
-2513505,,,,,0.0015,0.972,Não Significante,-0.1151
-2513604,,,,,0.0089,0.243,Não Significante,-0.6656
-2513653,,,,,0.0015,0.967,Não Significante,-0.1151
-2513703,251370,Santa Rita,Mata Paraibana,7.175013627639156,0.1657,0.404,Não Significante,-0.3032
-2513802,,,,,0.0176,0.142,Não Significante,-1.3127
-2513851,,,,,0.0015,0.974,Não Significante,-0.1151
-2513901,,,,,0.0044,0.239,Não Significante,-0.3292
-2513927,,,,,0.0009,0.993,Não Significante,-0.066
-2513943,,,,,-0.0497,0.037,Baixo-Alto (Anomalia),3.7127
-2513968,,,,,0.0006,1.0,Não Significante,-0.0415
-2513984,,,,,-0.0161,0.146,Não Significante,1.2047
-2514008,,,,,-0.0241,0.067,Não Significante,1.7988
-2514107,,,,,0.0015,0.972,Não Significante,-0.1151
-2514206,,,,,-0.0132,0.171,Não Significante,0.9847
-2514305,,,,,-0.0075,0.314,Não Significante,0.5562
-2514404,,,,,0.0208,0.126,Não Significante,-1.5523
-2514453,,,,,0.0015,0.958,Não Significante,-0.1151
-2514503,,,,,-0.0094,0.257,Não Significante,0.7002
-2514552,,,,,0.0015,0.982,Não Significante,-0.1151
-2514602,,,,,0.0208,0.111,Não Significante,-1.5523
-2514651,,,,,0.0015,0.985,Não Significante,-0.1151
-2514701,,,,,0.0015,0.985,Não Significante,-0.1151
-2514800,,,,,0.0015,0.966,Não Significante,-0.1151
-2514909,,,,,0.0153,0.166,Não Significante,-1.1416
-2515005,,,,,0.0015,0.354,Não Significante,-0.1151
-2515104,,,,,0.0015,0.966,Não Significante,-0.1151
-2515203,,,,,-0.1136,0.01,Baixo-Alto (Anomalia),8.4762
-2515302,,,,,0.0077,0.304,Não Significante,-0.5732
-2515401,,,,,0.0015,0.958,Não Significante,-0.1151
-2515500,,,,,0.0015,0.966,Não Significante,-0.1151
-2515609,,,,,0.0015,0.971,Não Significante,-0.1151
-2515708,,,,,0.0015,0.97,Não Significante,-0.1151
-2515807,,,,,0.0015,0.963,Não Significante,-0.1151
-2515906,,,,,0.0015,0.963,Não Significante,-0.1151
-2515930,,,,,0.0015,0.977,Não Significante,-0.1151
-2515971,,,,,0.0015,0.952,Não Significante,-0.1151
-2516003,,,,,0.0015,0.969,Não Significante,-0.1151
-2516102,,,,,0.0015,0.96,Não Significante,-0.1151
-2516151,,,,,0.0006,0.998,Não Significante,-0.0414
-2516201,251620,Sousa,Sertao Paraibano,18.20788387715931,-0.0849,0.956,Não Significante,-0.1151
-2516300,,,,,-0.0642,0.025,Baixo-Alto (Anomalia),4.7942
-2516409,,,,,0.0015,0.956,Não Significante,-0.1151
-2516508,,,,,0.0015,0.945,Não Significante,-0.1151
-2516607,251660,Sumé,Borborema,3.203307677543186,0.1161,0.968,Não Significante,-0.1151
-2516706,,,,,0.0015,0.973,Não Significante,-0.1151
-2516755,,,,,0.0015,0.965,Não Significante,-0.1151
-2516805,,,,,0.0015,0.976,Não Significante,-0.1151
-2516904,,,,,0.0015,0.962,Não Significante,-0.1151
-2517001,,,,,0.0015,0.977,Não Significante,-0.1151
-2517100,,,,,0.0015,0.979,Não Significante,-0.1151
-2517209,,,,,-0.0201,0.121,Não Significante,1.4978
-2517407,,,,,-0.2286,0.007,Baixo-Alto (Anomalia),17.0675
+municipio_ibge7,incidencia_100k,local_moran_i,p_valor_lisa,cluster_lisa,lag_espacial,nome_municipio,mesorregiao,populacao
+2500106,20.2,0.0494,0.575,Não Significante,-52.4078,Água Branca,Sertão Paraibano,12625
+2500205,17.6,-0.0368,0.746,Não Significante,37.1645,Aguiar,Sertão Paraibano,12625
+2500304,11.2,-0.005,0.986,Não Significante,4.5122,Alagoa Grande,Agreste Paraibano,12625
+2500403,13.1,-0.0615,0.268,Não Significante,57.0782,Alagoa Nova,Agreste Paraibano,12625
+2500502,9.3,-0.1239,0.073,Não Significante,107.7239,Alagoinha,Agreste Paraibano,12625
+2500536,26.9,0.0411,0.727,Não Significante,-50.4303,Alcantil,Borborema,12625
+2500577,13.2,-0.0393,0.876,Não Significante,36.5172,Algodão de Jandaíra,Agreste Paraibano,12625
+2500601,19.3,-0.015,0.96,Não Significante,15.6262,Alhandra,Mata Paraibana,12625
+2500700,16.3,-0.1281,0.066,Não Significante,125.9652,São João do Rio do Peixe,Sertão Paraibano,12625
+2500734,31.8,0.0298,0.944,Não Significante,-41.1611,Amparo,Borborema,12625
+2500775,16.3,-0.2513,0.037,Baixo-Alto (Anomalia),247.2222,Aparecida,Sertão Paraibano,12625
+2500809,8.8,0.0176,0.877,Não Significante,-15.1728,Araçagi,Agreste Paraibano,12625
+2500908,10.3,-0.0409,0.881,Não Significante,36.1539,Arara,Agreste Paraibano,12625
+2501005,5.7,-0.0765,0.203,Não Significante,62.7802,Araruna,Agreste Paraibano,12625
+2501104,588.5,-0.5754,0.17,Não Significante,-58.414,Areia,Agreste Paraibano,22860
+2501153,11.3,0.0529,0.728,Não Significante,-47.5163,Areia de Baraúnas,Sertão Paraibano,12625
+2501203,8.6,0.0683,0.209,Não Significante,-58.6753,Areial,Agreste Paraibano,12625
+2501302,7.6,0.0717,0.198,Não Significante,-60.6994,Aroeiras,Agreste Paraibano,12625
+2501351,30.4,0.0313,0.864,Não Significante,-41.7278,Assunção,Borborema,12625
+2501401,13.2,0.0588,0.411,Não Significante,-54.6378,Baía da Traição,Mata Paraibana,12625
+2501500,6.8,0.0711,0.191,Não Significante,-59.3561,Bananeiras,Agreste Paraibano,12625
+2501534,37.6,-0.0621,0.136,Não Significante,101.2497,Baraúna,Borborema,12625
+2501575,27.0,0.0425,0.501,Não Significante,-52.1763,Barra de Santana,Borborema,12625
+2501609,10.0,-0.0223,0.912,Não Significante,19.621,Barra de Santa Rosa,Agreste Paraibano,12625
+2501708,19.5,-0.1737,0.045,Baixo-Alto (Anomalia),181.5906,Barra de São Miguel,Borborema,12625
+2501807,83.6,0.1425,0.024,Alto-Alto (Hotspot),546.1172,Bayeux,Mata Paraibana,83571
+2501906,8.6,0.0706,0.201,Não Significante,-60.7311,Belém,Agreste Paraibano,12625
+2502003,18.6,-0.1213,0.13,Não Significante,124.7056,Belém do Brejo do Cruz,Sertão Paraibano,12625
+2502052,13.6,0.0598,0.334,Não Significante,-56.0011,Bernardino Batista,Sertão Paraibano,12625
+2502102,19.7,-0.1407,0.11,Não Significante,147.7572,Boa Ventura,Sertão Paraibano,12625
+2502151,8.5,-0.1743,0.059,Não Significante,149.6422,Boa Vista,Agreste Paraibano,12625
+2502201,17.0,-0.1626,0.059,Não Significante,162.0822,Bom Jesus,Sertão Paraibano,12625
+2502300,15.8,0.0543,0.5,Não Significante,-52.8403,Bom Sucesso,Sertão Paraibano,12625
+2502409,25.6,0.0447,0.517,Não Significante,-53.1578,Bonito de Santa Fé,Sertão Paraibano,12625
+2502508,28.3,-0.1387,0.06,Não Significante,175.8265,Boqueirão,Borborema,12625
+2502607,14.0,-0.1565,0.119,Não Significante,147.3822,Igaracy,Sertão Paraibano,12625
+2502706,11.6,0.0673,0.182,Não Significante,-60.7753,Borborema,Agreste Paraibano,12625
+2502805,13.3,-0.0888,0.172,Não Significante,82.7347,Brejo do Cruz,Sertão Paraibano,12625
+2502904,19.0,-0.119,0.123,Não Significante,123.3489,Brejo dos Santos,Sertão Paraibano,12625
+2503001,9.4,0.0586,0.672,Não Significante,-51.0644,Caaporã,Mata Paraibana,12625
+2503100,1374.5,-1.1441,0.779,Não Significante,-46.1778,Cabaceiras,Borborema,5388
+2503209,726.3,6.808,0.022,Alto-Alto (Hotspot),546.1172,Cabedelo,Mata Paraibana,67186
+2503308,12.9,-0.4094,0.042,Baixo-Alto (Anomalia),378.3722,Cachoeira dos Índios,Sertão Paraibano,12625
+2503407,19.0,0.0156,0.967,Não Significante,-16.1728,Cacimba de Areia,Sertão Paraibano,12625
+2503506,11.4,-0.0457,0.852,Não Significante,41.1156,Cacimba de Dentro,Agreste Paraibano,12625
+2503555,18.9,0.0488,0.614,Não Significante,-50.412,Cacimbas,Sertão Paraibano,12625
+2503605,9.6,0.0682,0.164,Não Significante,-59.5053,Caiçara,Agreste Paraibano,12625
+2503704,879.4,-0.7888,0.598,Não Significante,-51.3061,Cajazeiras,Sertão Paraibano,63873
+2503753,17.0,-0.048,0.765,Não Significante,47.8222,Cajazeirinhas,Sertão Paraibano,12625
+2503803,6.6,0.0673,0.252,Não Significante,-56.0506,Caldas Brandão,Agreste Paraibano,12625
+2503902,23.9,-0.3661,0.008,Baixo-Alto (Anomalia),419.4802,Camalaú,Borborema,12625
+2504009,243.6,-0.1903,0.152,Não Significante,-57.6496,Campina Grande,Agreste Paraibano,423583
+2504033,14.8,-0.0336,0.889,Não Significante,32.1972,Capim,Mata Paraibana,12625
+2504074,35.0,0.0281,0.899,Não Significante,-42.4578,Caraúbas,Borborema,12625
+2504108,19.6,0.0465,0.805,Não Significante,-48.6578,Carrapateira,Sertão Paraibano,12625
+2504157,6.0,0.071,0.188,Não Significante,-58.5144,Casserengue,Agreste Paraibano,12625
+2504207,19.5,0.0265,0.805,Não Significante,-27.7355,Catingueira,Sertão Paraibano,12625
+2504306,548.9,-0.4718,0.548,Não Significante,-51.8635,Catolé do Rocha,Sertão Paraibano,30968
+2504355,26.0,0.0058,0.994,Não Significante,-6.9358,Caturité,Borborema,12625
+2504405,15.5,0.0506,0.69,Não Significante,-49.0144,Conceição,Sertão Paraibano,12625
+2504504,20.6,-0.0281,0.774,Não Significante,30.1202,Condado,Sertão Paraibano,12625
+2504603,20.2,-0.2319,0.038,Baixo-Alto (Anomalia),246.1122,Conde,Mata Paraibana,12625
+2504702,34.2,0.0267,0.864,Não Significante,-39.5078,Congo,Borborema,12625
+2504801,14.8,-0.0327,0.833,Não Significante,31.328,Coremas,Sertão Paraibano,12625
+2504850,26.5,0.0308,0.908,Não Significante,-37.4178,Coxixola,Borborema,12625
+2504900,17.7,-0.0178,0.948,Não Significante,17.9442,Cruz do Espírito Santo,Mata Paraibana,12625
+2505006,34.5,0.0344,0.647,Não Significante,-51.2978,Cubati,Borborema,12625
+2505105,620.4,-0.5768,0.269,Não Significante,-55.1728,Cuité,Agreste Paraibano,19917
+2505204,8.8,-0.0532,0.885,Não Significante,45.8922,Cuitegi,Agreste Paraibano,12625
+2505238,15.8,0.0575,0.31,Não Significante,-56.0558,Cuité de Mamanguape,Mata Paraibana,12625
+2505279,12.5,0.0358,0.821,Não Significante,-32.832,Curral de Cima,Mata Paraibana,12625
+2505303,13.4,0.0544,0.616,Não Significante,-50.7263,Curral Velho,Sertão Paraibano,12625
+2505352,11.6,-0.102,0.16,Não Significante,92.0747,Damião,Agreste Paraibano,12625
+2505402,23.6,0.0423,0.801,Não Significante,-48.2228,Desterro,Sertão Paraibano,12625
+2505501,17.9,0.0498,0.685,Não Significante,-50.5253,Vista Serrana,Sertão Paraibano,12625
+2505600,22.2,-0.0447,0.648,Não Significante,49.431,Diamante,Sertão Paraibano,12625
+2505709,10.6,0.0681,0.2,Não Significante,-60.4744,Dona Inês,Agreste Paraibano,12625
+2505808,8.4,0.0697,0.219,Não Significante,-59.7594,Duas Estradas,Agreste Paraibano,12625
+2505907,19.6,-0.0299,0.846,Não Significante,31.3322,Emas,Sertão Paraibano,12625
+2506004,13.1,-0.0405,0.894,Não Significante,37.6089,Esperança,Agreste Paraibano,12625
+2506103,9.7,0.0263,0.913,Não Significante,-23.0144,Fagundes,Agreste Paraibano,12625
+2506202,38.2,0.0271,0.874,Não Significante,-44.9978,Frei Martinho,Borborema,12625
+2506251,4.2,0.072,0.231,Não Significante,-57.6844,Gado Bravo,Agreste Paraibano,12625
+2506301,438.5,-0.4272,0.169,Não Significante,-61.0211,Guarabira,Agreste Paraibano,58060
+2506400,11.6,0.0654,0.208,Não Significante,-59.1235,Gurinhém,Agreste Paraibano,12625
+2506509,28.9,-0.1141,0.073,Não Significante,146.7951,Gurjão,Borborema,12625
+2506608,17.0,0.0489,0.811,Não Significante,-48.7311,Ibiara,Sertão Paraibano,12625
+2506707,18.6,0.0502,0.63,Não Significante,-51.5858,Imaculada,Sertão Paraibano,12625
+2506806,5.5,0.0375,0.804,Não Significante,-30.6703,Ingá,Agreste Paraibano,12625
+2506905,9.3,0.0652,0.301,Não Significante,-56.7218,Itabaiana,Agreste Paraibano,12625
+2507002,822.2,-0.7559,0.417,Não Significante,-52.904,Itaporanga,Sertão Paraibano,24180
+2507101,17.8,0.0218,0.943,Não Significante,-22.0698,Itapororoca,Mata Paraibana,12625
+2507200,13.0,0.0658,0.194,Não Significante,-60.9444,Itatuba,Agreste Paraibano,12625
+2507309,14.6,0.0247,0.92,Não Significante,-23.5418,Jacaraú,Mata Paraibana,12625
+2507408,15.0,-0.0385,0.883,Não Significante,36.9672,Jericó,Sertão Paraibano,12625
+2507507,871.2,3.4677,0.044,Alto-Alto (Hotspot),227.8472,João Pessoa,Mata Paraibana,842292
+2507606,8.7,0.0699,0.231,Não Significante,-60.2018,Juarez Távora,Agreste Paraibano,12625
+2507705,34.1,0.0305,0.768,Não Significante,-44.8692,Juazeirinho,Borborema,12625
+2507804,30.4,0.0311,0.885,Não Significante,-41.4978,Junco do Seridó,Borborema,12625
+2507903,14.6,0.0531,0.693,Não Significante,-50.6053,Juripiranga,Mata Paraibana,12625
+2508000,20.3,0.0146,0.95,Não Significante,-15.5328,Juru,Sertão Paraibano,12625
+2508109,18.6,-0.0327,0.835,Não Significante,33.6065,Lagoa,Sertão Paraibano,12625
+2508208,11.9,0.0646,0.194,Não Significante,-58.6811,Lagoa de Dentro,Agreste Paraibano,12625
+2508307,8.3,0.0242,0.922,Não Significante,-20.7378,Lagoa Seca,Agreste Paraibano,12625
+2508406,16.9,-0.2501,0.054,Não Significante,248.6656,Lastro,Sertão Paraibano,12625
+2508505,26.0,0.0355,0.898,Não Significante,-42.6138,Livramento,Borborema,12625
+2508554,6.6,0.0718,0.178,Não Significante,-59.7678,Logradouro,Agreste Paraibano,12625
+2508604,17.6,-0.1188,0.131,Não Significante,119.6872,Lucena,Mata Paraibana,12625
+2508703,19.2,0.0494,0.54,Não Significante,-51.3649,Mãe d'Água,Sertão Paraibano,12625
+2508802,18.2,0.0154,0.957,Não Significante,-15.6994,Malta,Sertão Paraibano,12625
+2508901,187.0,-0.1205,0.368,Não Significante,-54.1861,Mamanguape,Mata Paraibana,45046
+2509008,17.3,0.0522,0.567,Não Significante,-52.2278,Manaíra,Sertão Paraibano,12625
+2509057,11.4,0.0601,0.5,Não Significante,-54.0628,Marcação,Mata Paraibana,12625
+2509107,15.0,0.0602,0.201,Não Significante,-57.7863,Mari,Mata Paraibana,12625
+2509156,16.8,-0.2526,0.033,Baixo-Alto (Anomalia),250.8256,Marizópolis,Sertão Paraibano,12625
+2509206,8.1,0.0318,0.903,Não Significante,-27.0992,Massaranduba,Agreste Paraibano,12625
+2509305,15.9,-0.0031,0.991,Não Significante,3.0056,Mataraca,Mata Paraibana,12625
+2509339,10.7,0.0669,0.199,Não Significante,-59.4998,Matinhas,Agreste Paraibano,12625
+2509370,25.8,-0.0452,0.423,Não Significante,53.9722,Mato Grosso,Sertão Paraibano,12625
+2509396,18.9,0.0493,0.649,Não Significante,-50.9778,Maturéia,Sertão Paraibano,12625
+2509404,10.4,0.0673,0.175,Não Significante,-59.572,Mogeiro,Agreste Paraibano,12625
+2509503,9.6,0.0684,0.204,Não Significante,-59.7778,Montadas,Agreste Paraibano,12625
+2509602,10.5,0.0548,0.771,Não Significante,-48.6578,Monte Horebe,Sertão Paraibano,12625
+2509701,2319.7,-1.9618,0.865,Não Significante,-45.9138,Monteiro,Borborema,32601
+2509800,9.7,-0.002,0.997,Não Significante,1.7108,Mulungu,Agreste Paraibano,12625
+2509909,9.9,0.0676,0.217,Não Significante,-59.3678,Natuba,Agreste Paraibano,12625
+2510006,28.1,-0.1333,0.059,Não Significante,167.966,Nazarezinho,Sertão Paraibano,12625
+2510105,9.4,-0.2903,0.054,Não Significante,252.7672,Nova Floresta,Agreste Paraibano,12625
+2510204,19.4,0.0159,0.944,Não Significante,-16.5853,Nova Olinda,Sertão Paraibano,12625
+2510303,28.2,0.0328,0.933,Não Significante,-41.3928,Nova Palmeira,Borborema,12625
+2510402,13.5,0.0544,0.549,Não Significante,-50.889,Olho d'Água,Sertão Paraibano,12625
+2510501,12.3,0.0574,0.486,Não Significante,-52.5161,Olivedos,Agreste Paraibano,12625
+2510600,33.1,0.0295,0.952,Não Significante,-42.2078,Ouro Velho,Borborema,12625
+2510659,33.3,0.0288,0.766,Não Significante,-41.5578,Parari,Borborema,12625
+2510709,14.6,0.0527,0.661,Não Significante,-50.2061,Passagem,Sertão Paraibano,12625
+2510808,231.4,-0.1537,0.577,Não Significante,-50.08,Patos,Sertão Paraibano,104199
+2510907,23.8,-0.0198,0.884,Não Significante,22.6922,Paulista,Sertão Paraibano,12625
+2511004,12.6,-0.053,0.655,Não Significante,48.7172,Pedra Branca,Sertão Paraibano,12625
+2511103,32.1,0.0306,0.845,Não Significante,-42.5878,Pedra Lavrada,Borborema,12625
+2511202,24.4,-0.0042,0.994,Não Significante,4.8139,Pedras de Fogo,Mata Paraibana,12625
+2511301,14.2,-0.0653,0.175,Não Significante,61.8508,Piancó,Sertão Paraibano,12625
+2511400,24.9,-0.0494,0.221,Não Significante,57.7706,Picuí,Borborema,12625
+2511509,16.9,0.0545,0.457,Não Significante,-54.1178,Pilar,Mata Paraibana,12625
+2511608,8.7,-0.0411,0.878,Não Significante,35.3689,Pilões,Agreste Paraibano,12625
+2511707,6.5,-0.03,0.921,Não Significante,24.9282,Pilõezinhos,Agreste Paraibano,12625
+2511806,10.0,0.009,0.969,Não Significante,-7.9515,Pirpirituba,Agreste Paraibano,12625
+2511905,12.6,0.0582,0.502,Não Significante,-53.5511,Pitimbu,Mata Paraibana,12625
+2512002,10.8,0.0423,0.653,Não Significante,-37.7359,Pocinhos,Agreste Paraibano,12625
+2512036,14.5,0.0571,0.473,Não Significante,-54.3078,Poço Dantas,Sertão Paraibano,12625
+2512077,24.4,0.0467,0.456,Não Significante,-54.1078,Poço de José de Moura,Sertão Paraibano,12625
+2512101,608.6,-0.5201,0.43,Não Significante,-50.8303,Pombal,Sertão Paraibano,32799
+2512200,23.5,-0.4697,0.006,Baixo-Alto (Anomalia),533.6597,Prata,Borborema,12625
+2512309,16.9,0.0291,0.892,Não Significante,-28.9028,Princesa Isabel,Sertão Paraibano,12625
+2512408,11.6,0.0019,0.986,Não Significante,-1.7603,Puxinanã,Agreste Paraibano,12625
+2512507,7.2,0.0201,0.959,Não Significante,-16.8394,Queimadas,Agreste Paraibano,12625
+2512606,19.1,0.0089,0.981,Não Significante,-9.2558,Quixaba,Sertão Paraibano,12625
+2512705,12.6,-0.0941,0.159,Não Significante,86.5622,Remígio,Agreste Paraibano,12625
+2512721,10.7,0.0649,0.224,Não Significante,-57.7228,Pedro Régis,Mata Paraibana,12625
+2512747,10.2,0.069,0.204,Não Significante,-60.8978,Riachão,Agreste Paraibano,12625
+2512754,10.4,0.0036,0.986,Não Significante,-3.1428,Riachão do Bacamarte,Agreste Paraibano,12625
+2512762,19.3,0.0553,0.246,Não Significante,-57.5903,Riachão do Poço,Mata Paraibana,12625
+2512788,20.7,0.0415,0.89,Não Significante,-44.4203,Riacho de Santo Antônio,Borborema,12625
+2512804,12.9,-0.0617,0.272,Não Significante,57.0922,Riacho dos Cavalos,Sertão Paraibano,12625
+2512903,18.4,-0.0184,0.937,Não Significante,18.7951,Rio Tinto,Mata Paraibana,12625
+2513000,30.3,0.0346,0.854,Não Significante,-46.0738,Salgadinho,Borborema,12625
+2513109,10.3,0.0669,0.196,Não Significante,-59.2053,Salgado de São Félix,Agreste Paraibano,12625
+2513158,10.6,0.0592,0.543,Não Significante,-52.5853,Santa Cecília,Agreste Paraibano,12625
+2513208,15.5,-0.2028,0.053,Não Significante,196.3739,Santa Cruz,Sertão Paraibano,12625
+2513307,19.1,-0.1558,0.08,Não Significante,161.7422,Santa Helena,Sertão Paraibano,12625
+2513356,19.4,0.0521,0.527,Não Significante,-54.3678,Santa Inês,Sertão Paraibano,12625
+2513406,23.9,0.0373,0.826,Não Significante,-42.7911,Santa Luzia,Borborema,12625
+2513505,25.7,0.0443,0.493,Não Significante,-52.7818,Santana de Mangueira,Sertão Paraibano,12625
+2513604,20.1,-0.0779,0.103,Não Significante,82.3908,Santana dos Garrotes,Sertão Paraibano,12625
+2513653,13.4,0.0565,0.56,Não Significante,-52.7038,Joca Claudino,Sertão Paraibano,12625
+2513703,360.7,0.5311,0.081,Não Significante,96.1613,Santa Rita,Mata Paraibana,151413
+2513802,20.8,0.0141,0.969,Não Significante,-15.1328,Santa Teresinha,Sertão Paraibano,12625
+2513851,22.3,0.0361,0.896,Não Significante,-39.9298,Santo André,Borborema,12625
+2513901,21.4,-0.0736,0.18,Não Significante,79.8697,São Bento,Sertão Paraibano,12625
+2513927,22.8,-0.13,0.106,Não Significante,145.5556,São Bentinho,Sertão Paraibano,12625
+2513943,23.3,-0.2617,0.021,Baixo-Alto (Anomalia),295.7747,São Domingos do Cariri,Borborema,12625
+2513968,22.1,-0.2202,0.092,Não Significante,242.6122,São Domingos,Sertão Paraibano,12625
+2513984,19.8,-0.2331,0.034,Baixo-Alto (Anomalia),245.4782,São Francisco,Sertão Paraibano,12625
+2514008,33.5,-0.0861,0.061,Não Significante,124.7697,São João do Cariri,Borborema,12625
+2514107,40.2,0.0241,0.921,Não Significante,-42.8044,São João do Tigre,Borborema,12625
+2514206,17.2,-0.1973,0.056,Não Significante,197.3356,São José da Lagoa Tapada,Sertão Paraibano,12625
+2514305,15.2,-0.0671,0.194,Não Significante,64.5994,São José de Caiana,Sertão Paraibano,12625
+2514404,14.6,0.0065,0.988,Não Significante,-6.2338,São José de Espinharas,Sertão Paraibano,12625
+2514453,13.5,0.0623,0.196,Não Significante,-58.2561,São José dos Ramos,Mata Paraibana,12625
+2514503,17.9,-0.0707,0.143,Não Significante,71.6437,São José de Piranhas,Sertão Paraibano,12625
+2514552,19.6,0.0523,0.379,Não Significante,-54.8153,São José de Princesa,Sertão Paraibano,12625
+2514602,19.3,0.0077,0.99,Não Significante,-7.9958,São José do Bonfim,Sertão Paraibano,12625
+2514651,21.5,0.0495,0.494,Não Significante,-53.8828,São José do Brejo do Cruz,Sertão Paraibano,12625
+2514701,28.5,0.0335,0.934,Não Significante,-42.6628,São José do Sabugi,Borborema,12625
+2514800,37.5,0.0252,0.913,Não Significante,-40.9153,São José dos Cordeiros,Borborema,12625
+2514909,26.8,0.0162,0.948,Não Significante,-19.8392,São Mamede,Borborema,12625
+2515005,26.4,0.0438,0.466,Não Significante,-53.0111,São Miguel de Taipu,Mata Paraibana,12625
+2515104,11.2,0.0661,0.207,Não Significante,-59.2928,São Sebastião de Lagoa de Roça,Agreste Paraibano,12625
+2515203,23.0,-0.4722,0.009,Baixo-Alto (Anomalia),531.0522,São Sebastião do Umbuzeiro,Borborema,12625
+2515302,12.6,0.0216,0.831,Não Significante,-19.8548,Sapé,Mata Paraibana,12625
+2515401,31.4,0.0325,0.844,Não Significante,-44.5294,São Vicente do Seridó,Borborema,12625
+2515500,27.0,0.0305,0.883,Não Significante,-37.4361,Serra Branca,Borborema,12625
+2515609,11.3,0.0676,0.193,Não Significante,-60.8558,Serra da Raiz,Agreste Paraibano,12625
+2515708,20.1,0.0497,0.565,Não Significante,-52.5553,Serra Grande,Sertão Paraibano,12625
+2515807,9.6,0.0699,0.214,Não Significante,-61.0858,Serra Redonda,Agreste Paraibano,12625
+2515906,8.0,0.0706,0.177,Não Significante,-60.0811,Serraria,Agreste Paraibano,12625
+2515930,6.5,0.0727,0.194,Não Significante,-60.4318,Sertãozinho,Agreste Paraibano,12625
+2515971,14.9,0.0561,0.371,Não Significante,-53.7106,Sobrado,Mata Paraibana,12625
+2516003,11.6,0.067,0.196,Não Significante,-60.6306,Solânea,Agreste Paraibano,12625
+2516102,10.3,0.0553,0.733,Não Significante,-48.8478,Soledade,Agreste Paraibano,12625
+2516151,7.1,-0.0651,0.33,Não Significante,54.5972,Sossêgo,Agreste Paraibano,12625
+2516201,917.7,-0.8217,0.511,Não Significante,-51.0344,Sousa,Sertão Paraibano,67933
+2516300,29.5,-0.22,0.015,Baixo-Alto (Anomalia),286.9422,Sumé,Borborema,12625
+2516409,10.6,0.0693,0.196,Não Significante,-61.5678,Tacima,Agreste Paraibano,12625
+2516508,22.9,0.0405,0.625,Não Significante,-45.3868,Taperoá,Borborema,12625
+2516607,163.5,-0.0901,0.702,Não Significante,-50.6878,Tavares,Sertão Paraibano,17338
+2516706,18.8,0.0485,0.678,Não Significante,-50.0294,Teixeira,Sertão Paraibano,12625
+2516755,28.8,0.0299,0.909,Não Significante,-38.2728,Tenório,Borborema,12625
+2516805,13.6,0.0561,0.531,Não Significante,-52.4818,Triunfo,Sertão Paraibano,12625
+2516904,19.6,0.0493,0.611,Não Significante,-51.6378,Uiraúna,Sertão Paraibano,12625
+2517001,11.0,0.0691,0.164,Não Significante,-61.7953,Umbuzeiro,Agreste Paraibano,12625
+2517100,35.2,0.0293,0.906,Não Significante,-44.5128,Várzea,Borborema,12625
+2517209,22.4,-0.1556,0.06,Não Significante,172.7697,Vieirópolis,Sertão Paraibano,12625
+2517407,19.8,-1.0474,0.003,Baixo-Alto (Anomalia),1101.5122,Zabelê,Borborema,12625
