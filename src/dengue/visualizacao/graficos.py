@@ -59,9 +59,10 @@ def clusterizar_perfis_sazonais_p3(
     seed: int = SEED,
 ) -> pd.DataFrame:
     """Responde P3: agrupa municípios da Paraíba por perfil sazonal normalizado (SE 1..52)."""
+    cols_meta = [c for c in ["municipio", "nome_municipio", "mesorregiao"] if c in painel.columns]
     df_se = (
         painel[painel["se"] <= 52]
-        .groupby(["municipio", "nome_municipio", "mesorregiao", "se"], as_index=False)["incidencia_100k"]
+        .groupby(cols_meta + ["se"], as_index=False)["incidencia_100k"]
         .mean()
     )
     tabela_pivo = df_se.pivot(index="municipio", columns="se", values="incidencia_100k").fillna(0.0)
@@ -78,7 +79,7 @@ def clusterizar_perfis_sazonais_p3(
     se_pico = tabela_pivo.idxmax(axis=1).astype(int)
     inc_media = tabela_pivo.mean(axis=1)
 
-    meta_mun = painel[["municipio", "nome_municipio", "mesorregiao"]].drop_duplicates(subset=["municipio"])
+    meta_mun = painel[cols_meta].drop_duplicates(subset=["municipio"])
     resultado = pd.DataFrame(
         {
             "municipio": tabela_pivo.index,
@@ -97,8 +98,9 @@ def calcular_autocorrelacao_espacial_moran_p4(
     seed: int = SEED,
 ) -> dict[str, Any]:
     """Responde P4: calcula o Índice I de Moran global da incidência média municipal e significância por permutação."""
+    cols_meta = [c for c in ["municipio", "nome_municipio", "mesorregiao", "lat", "lon"] if c in painel.columns]
     resumo_mun = (
-        painel.groupby(["municipio", "nome_municipio", "mesorregiao", "lat", "lon"], as_index=False)["incidencia_100k"]
+        painel.groupby(cols_meta, as_index=False)["incidencia_100k"]
         .mean()
         .sort_values("municipio")
         .reset_index(drop=True)

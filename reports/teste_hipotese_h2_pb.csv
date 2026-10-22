@@ -1,8 +1,8 @@
 dimensao,estrato,n_municipios,n_observacoes,mae_baseline_sazonal,mae_lgbm_sem_clima,mae_lgbm_com_clima,skill_clima_vs_sem_clima,ic95_inf_vs_sem_clima,ic95_sup_vs_sem_clima,skill_clima_vs_baseline,ganho_significativo_ic95
-Mesorregiao,Agreste Paraibano,4,420,10.2909,6.9986,6.3772,0.0888,-0.056,0.2264,0.3803,False
-Mesorregiao,Borborema,3,315,9.4518,6.7977,6.2368,0.0825,-0.0007,0.1632,0.3401,False
-Mesorregiao,Mata Paraibana,5,525,28.5745,21.4839,16.8379,0.2163,0.1634,0.2609,0.4107,True
-Mesorregiao,Sertao Paraibano,6,630,25.7965,15.5064,12.4178,0.1992,0.1516,0.2479,0.5186,True
-Porte_Populacional,1_Pequeno (<50k),9,945,18.4912,11.9848,10.1434,0.1536,0.1085,0.2042,0.4514,True
-Porte_Populacional,2_Medio (50k-200k),7,735,23.3246,16.6478,13.2085,0.2066,0.1621,0.2477,0.4337,True
-Porte_Populacional,3_Grande (>200k),2,210,18.7382,12.2239,9.5826,0.2161,0.0686,0.3187,0.4886,True
+Mesorregiao,Agreste Paraibano,4,416,12.9884,4.4569,4.4217,0.0079,-0.0208,0.0307,0.6596,False
+Mesorregiao,Borborema,3,312,31.8212,21.2544,21.0775,0.0083,-0.0188,0.0401,0.3376,False
+Mesorregiao,Mata Paraibana,5,520,9.2161,5.1422,4.9412,0.0391,0.0051,0.0761,0.4639,True
+Mesorregiao,Sertao Paraibano,6,624,18.0322,7.6155,7.7445,-0.0169,-0.0395,0.0045,0.5705,False
+Porte_Populacional,1_Pequeno (<50k),9,936,21.0025,10.7701,10.7533,0.0016,-0.0176,0.023,0.488,False
+Porte_Populacional,2_Medio (50k-200k),7,728,11.9357,5.8379,5.9096,-0.0123,-0.0339,0.0092,0.5049,False
+Porte_Populacional,3_Grande (>200k),2,208,14.5594,7.5994,6.9727,0.0825,0.0339,0.1411,0.5211,True

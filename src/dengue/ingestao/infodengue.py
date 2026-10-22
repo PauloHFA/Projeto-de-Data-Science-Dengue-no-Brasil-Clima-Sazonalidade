@@ -32,11 +32,7 @@ def baixar_serie_infodengue_municipio(
     timeout: int = 20,
     max_retries: int = 3,
 ) -> pd.DataFrame | None:
-    """Baixa a série histórica semanal do InfoDengue (Fiocruz/FGV) para um município pelo código IBGE de 7 dígitos.
-
-    Retorna dados oficiais do InfoDengue:
-    - data_iniSE, SE, casos, casos_est (nowcast), Rt, nivel de alerta, tempmed, umidmed, etc.
-    """
+    """Baixa a série histórica semanal do InfoDengue (Fiocruz/FGV) para um município pelo código IBGE de 7 dígitos."""
     params = {
         "geocode": str(geocode_ibge7),
         "disease": "dengue",
@@ -66,25 +62,23 @@ def carregar_ou_baixar_infodengue_pb(
     diretorio_raw: Path = RAW_DIR,
     forcar_download: bool = False,
     max_municipios: int | None = None,
+    limite_municipios: int | None = None,
 ) -> pd.DataFrame:
-    """Ingere e padroniza o benchmark do InfoDengue para municípios da Paraíba com registro SHA-256 (REG-08).
-
-    Conforme Seção 3 e Seção 5.7 do documento base:
-    'InfoDengue: Estimativas e nowcasting de casos (Fiocruz/FGV). Usar como benchmark externo, não como verdade.'
-    """
+    """Ingere e padroniza o benchmark do InfoDengue para municípios da Paraíba com registro SHA-256 (REG-08)."""
     diretorio_raw.mkdir(parents=True, exist_ok=True)
     caminho_parquet = diretorio_raw / "infodengue_benchmark_pb.parquet"
 
     if caminho_parquet.exists() and not forcar_download:
         return pd.read_parquet(caminho_parquet)
 
+    limite = max_municipios if max_municipios is not None else limite_municipios
     muns = (
         df_pop[["municipio", "municipio_ibge7", "nome_municipio"]]
         .drop_duplicates(subset=["municipio"])
         .reset_index(drop=True)
     )
-    if max_municipios:
-        muns = muns.head(max_municipios)
+    if limite:
+        muns = muns.head(limite)
 
     print(f"  -> Consultando API pública do InfoDengue para {len(muns)} municípios da Paraíba (2015–2024)...")
     dfs_brutos = []
@@ -102,11 +96,10 @@ def carregar_ou_baixar_infodengue_pb(
             dfs_brutos.append(df_m)
             print(f"     [{idx+1}/{len(muns)}] {nome} ({cod7}): {len(df_m)} semanas baixadas.")
         else:
-            print(f"     [{idx+1}/{len(muns)}] {nome} ({cod7}): sem resposta da API, gerando série simulada.")
+            print(f"     [{idx+1}/{len(muns)}] {nome} ({cod7}): sem resposta da API.")
 
     if dfs_brutos:
         df_concat = pd.concat(dfs_brutos, ignore_index=True)
-        # Padroniza colunas essenciais
         df_formatado = pd.DataFrame(
             {
                 "municipio": df_concat["municipio"].astype(str),
@@ -126,7 +119,6 @@ def carregar_ou_baixar_infodengue_pb(
         )
         fonte = "INFODENGUE_FIOCRUZ_FGV_API_PUBLICA"
     else:
-        # Fallback offline para reprodutibilidade estrita caso sem conexão externa
         df_formatado = pd.DataFrame()
         fonte = "INFODENGUE_OFFLINE_PLACEHOLDER"
 
@@ -154,13 +146,7 @@ def comparar_com_benchmark_infodengue(
     diretorio_reports: Path = REPORTS_DIR,
     diretorio_figuras: Path = FIGURES_DIR,
 ) -> tuple[pd.DataFrame, list[Path]]:
-    """Compara as contagens e previsões do pipeline com as estimativas oficiais do InfoDengue (Seção 5.7).
-
-    Calcula:
-    1. Correlação de Spearman e Pearson entre os casos do pipeline e casos/nowcasting do InfoDengue.
-    2. Concordância entre níveis de alerta do InfoDengue (1=Verde, 2=Amarelo, 3=Laranja, 4=Vermelho) e a incidência real.
-    3. Gera a Figura 7 comparando séries históricas e nowcasting de João Pessoa e Campina Grande.
-    """
+    """Compara as contagens e previsões do pipeline com as estimativas oficiais do InfoDengue (Seção 5.7)."""
     diretorio_reports.mkdir(parents=True, exist_ok=True)
     diretorio_figuras.mkdir(parents=True, exist_ok=True)
 
@@ -182,8 +168,6 @@ def comparar_com_benchmark_infodengue(
         r_spear_casos = float(grp["casos"].corr(grp["casos_infodengue"], method="spearman"))
         r_spear_nowcast = float(grp["casos"].corr(grp["casos_est_nowcast"], method="spearman"))
         r_pearson = float(grp["casos"].corr(grp["casos_infodengue"], method="pearson"))
-
-        # MAE entre contagem bruta do pipeline e casos do InfoDengue
         mae_contagem = float(np.mean(np.abs(grp["casos"] - grp["casos_infodengue"])))
 
         resultados_mun.append(
@@ -202,7 +186,6 @@ def comparar_com_benchmark_infodengue(
     df_comp = pd.DataFrame(resultados_mun).sort_values("municipio").reset_index(drop=True)
     df_comp.to_csv(diretorio_reports / "comparacao_infodengue_pb.csv", index=False)
 
-    # Gera Figura 7: Benchmark InfoDengue vs Pipeline para os dois maiores municípios (João Pessoa e Campina Grande)
     caminhos_fig: list[Path] = []
     muns_plot = ["250750", "250400"]
     sub_plot = cruzado[cruzado["municipio"].isin(muns_plot)].sort_values(["municipio", "semana"])
@@ -221,7 +204,7 @@ def comparar_com_benchmark_infodengue(
                 dados_m["casos"],
                 color="#111827",
                 linewidth=1.4,
-                label="Pipeline (Casos Prováveis SINAN-PB)",
+                label="Pipeline (Casos Prováveis)",
             )
             ax.plot(
                 dados_m["semana"],

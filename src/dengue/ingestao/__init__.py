@@ -1,6 +1,7 @@
 """Módulos de ingestão de dados e versionamento por hash SHA-256 (REG-08)."""
 
 from dengue.ingestao.ibge import carregar_ou_baixar_populacao_pb
+from dengue.ingestao.infodengue import carregar_ou_baixar_infodengue_pb
 from dengue.ingestao.infodengue import (
     carregar_ou_baixar_infodengue_pb,
     comparar_com_benchmark_infodengue,

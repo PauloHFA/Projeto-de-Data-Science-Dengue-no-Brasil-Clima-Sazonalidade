@@ -9,6 +9,7 @@ from dengue.qualidade.contratos import (
 from dengue.qualidade.limpeza import (
     EtapaFunil,
     construir_painel_semanal,
+    construir_painel_semanal_infodengue,
     decodificar_idade_sinan,
     limpar_notificacoes_com_funil,
 )
@@ -22,5 +23,6 @@ __all__ = [
     "decodificar_idade_sinan",
     "limpar_notificacoes_com_funil",
     "construir_painel_semanal",
+    "construir_painel_semanal_infodengue",
 ]
 

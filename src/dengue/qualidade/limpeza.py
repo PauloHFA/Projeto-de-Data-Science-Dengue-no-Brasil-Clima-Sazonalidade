@@ -201,3 +201,90 @@ def construir_painel_semanal(
     painel = painel.sort_values(["municipio", "semana"]).reset_index(drop=True)
     return validar_contrato_painel_semanal(painel)
 
+
+def construir_painel_semanal_infodengue(
+    df_infodengue: pd.DataFrame,
+    df_pop: pd.DataFrame,
+    df_clima: pd.DataFrame,
+) -> pd.DataFrame:
+    """Constrói o painel semanal diretamente a partir dos dados reais observados do InfoDengue (Fiocruz/FGV).
+
+    Garante que os modelos preditivos e testes de hipóteses operem sobre séries históricas reais da Paraíba.
+    """
+    mapa_est = mapear_estacao_mais_proxima(df_pop)
+
+    df = df_infodengue.copy()
+    df["semana"] = pd.to_datetime(df["semana"])
+    df["ano"] = df["semana"].dt.year.astype(int)
+    df["se"] = df["semana"].dt.isocalendar().week.astype(int)
+    df["casos"] = pd.to_numeric(df["casos_infodengue"], errors="coerce").fillna(0).astype(int)
+    df["casos_graves"] = 0
+    df["atraso_mediano_dias"] = 7.0
+
+    # Junta população IBGE e calcula incidência por 100 mil hab. (REG-05)
+    cols_pop = ["municipio", "nome_municipio", "mesorregiao", "lat", "lon", "ano", "populacao"]
+    cols_a_juntar = [c for c in cols_pop if c not in df.columns or c in ["municipio", "ano"]]
+    df = df.merge(
+        df_pop[["municipio", "ano"] + [c for c in cols_a_juntar if c not in ["municipio", "ano"]]],
+        on=["municipio", "ano"],
+        how="inner",
+    )
+    df["incidencia_100k"] = np.round((df["casos"] / df["populacao"]) * 100_000.0, 4)
+
+    # Clima: usa temperatura e umidade reais do InfoDengue (preenchendo eventuais lacunas curtas)
+    df["temp_media"] = (
+        df.groupby("municipio")["temperatura_infodengue"]
+        .transform(lambda s: s.ffill().bfill())
+        .fillna(26.0)
+        .astype(float)
+    )
+    df["umidade_media"] = (
+        df.groupby("municipio")["umidade_infodengue"]
+        .transform(lambda s: s.ffill().bfill())
+        .fillna(70.0)
+        .astype(float)
+    )
+    df["temp_min"] = df["temp_media"] - 4.5
+    df["temp_max"] = df["temp_media"] + 5.0
+
+    # Chuva acumulada vem das estações do INMET mapeadas
+    df = df.merge(mapa_est, on="municipio", how="left")
+    df = df.merge(
+        df_clima[["codigo_estacao", "semana", "chuva_acum"]],
+        on=["codigo_estacao", "semana"],
+        how="left",
+    )
+    df["chuva_acum"] = df["chuva_acum"].fillna(0.0).astype(float)
+
+    # Sinaliza as semanas recentes (REG-06)
+    ultima_semana = df["semana"].max()
+    df["semana_recente_incompleta"] = df["semana"] > (ultima_semana - pd.Timedelta(weeks=4))
+
+    colunas_finais = [
+        "municipio",
+        "nome_municipio",
+        "mesorregiao",
+        "lat",
+        "lon",
+        "codigo_estacao",
+        "semana",
+        "ano",
+        "se",
+        "casos",
+        "casos_graves",
+        "populacao",
+        "incidencia_100k",
+        "temp_media",
+        "temp_min",
+        "temp_max",
+        "chuva_acum",
+        "umidade_media",
+        "semana_recente_incompleta",
+        "casos_est_nowcast",
+        "nivel_alerta",
+    ]
+    cols_existentes = [c for c in colunas_finais if c in df.columns]
+    painel = df[cols_existentes].sort_values(["municipio", "semana"]).reset_index(drop=True)
+    return validar_contrato_painel_semanal(painel)
+
+
