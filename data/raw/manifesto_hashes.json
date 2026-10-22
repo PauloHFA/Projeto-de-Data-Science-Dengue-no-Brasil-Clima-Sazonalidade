@@ -1,0 +1,66 @@
+[
+  {
+    "arquivo": "ibge_populacao_pb_2015_2024.parquet",
+    "caminho_relativo": "ibge_populacao_pb_2015_2024.parquet",
+    "fonte": "IBGE_CENSO2022_TABELA_OFICIAL_PB",
+    "versao": "Censo2022_Estimativas_2015_2024",
+    "sha256": "e910c7b477eb949c56d9ba41fada1c3e6be264f942b34eff7b613e0d9c35ffe2",
+    "tamanho_bytes": 7562,
+    "data_ingestao_utc": "2026-10-22T14:38:36.925891+00:00",
+    "metadados": {
+      "uf": "PB",
+      "n_municipios": 18,
+      "anos": [
+        2015,
+        2024
+      ]
+    }
+  },
+  {
+    "arquivo": "inmet_clima_semanal_pb_2015_2024.parquet",
+    "caminho_relativo": "inmet_clima_semanal_pb_2015_2024.parquet",
+    "fonte": "INMET_ESTACOES_PB_CLIMATOLOGIA_SEMANAL",
+    "versao": "2015_2024_v1",
+    "sha256": "857f1da927b1f7b4098c91b6b5d3b0ff7a9b905a9cae4a562e40a0643d3bae99",
+    "tamanho_bytes": 76165,
+    "data_ingestao_utc": "2026-10-22T14:38:37.086896+00:00",
+    "metadados": {
+      "uf": "PB",
+      "estacoes": [
+        "A320",
+        "A310",
+        "A313",
+        "A348",
+        "A331",
+        "A321",
+        "A333",
+        "82795"
+      ],
+      "n_registros": 4176
+    }
+  },
+  {
+    "arquivo": "sinan_dengue_pb_2015_2024.parquet",
+    "caminho_relativo": "sinan_dengue_pb_2015_2024.parquet",
+    "fonte": "SINAN_DENGUE_PB_MICRODADOS_CALIBRADOS",
+    "versao": "2015_2024_v1",
+    "sha256": "88e8f69b0a7c959a8f98418d04d4475ed42ca70731ecbf91ab1e4fd8c165ab9f",
+    "tamanho_bytes": 3793732,
+    "data_ingestao_utc": "2026-10-22T14:38:48.514945+00:00",
+    "metadados": {
+      "uf": "PB",
+      "n_notificacoes_brutas": 400427,
+      "colunas": [
+        "ID_NOTIFIC",
+        "DT_NOTIFIC",
+        "DT_SIN_PRI",
+        "SG_UF_NOT",
+        "ID_MUNICIP",
+        "CLASSI_FIN",
+        "CRITERIO",
+        "NU_IDADE_N",
+        "CS_SEXO"
+      ]
+    }
+  }
+]

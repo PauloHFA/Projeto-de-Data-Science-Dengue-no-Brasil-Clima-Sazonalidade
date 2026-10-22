@@ -1,0 +1,19 @@
+municipio,nome_municipio,mesorregiao,cluster_sazonal,se_pico_medio,incidencia_media_semanal
+250110,Areia,Agreste Paraibano,0,18,10.07
+250370,Cajazeiras,Sertao Paraibano,0,17,25.35
+250400,Campina Grande,Agreste Paraibano,0,16,9.78
+250430,Catolé do Rocha,Sertao Paraibano,0,18,27.97
+250510,Cuité,Agreste Paraibano,0,16,10.17
+250630,Guarabira,Agreste Paraibano,0,13,10.06
+250700,Itaporanga,Sertao Paraibano,0,18,26.85
+250970,Monteiro,Borborema,0,17,5.49
+251080,Patos,Sertao Paraibano,0,16,26.48
+251210,Pombal,Sertao Paraibano,0,18,28.86
+251620,Sousa,Sertao Paraibano,0,18,27.81
+251660,Sumé,Borborema,0,19,5.42
+250180,Bayeux,Mata Paraibana,1,20,42.18
+250320,Cabedelo,Mata Paraibana,1,19,42.03
+250750,João Pessoa,Mata Paraibana,1,22,42.14
+250890,Mamanguape,Mata Paraibana,1,20,42.64
+251370,Santa Rita,Mata Paraibana,1,20,41.97
+250310,Cabaceiras,Borborema,2,16,9.37

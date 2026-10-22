@@ -1,0 +1,9 @@
+horizonte,familia,mae_sem_clima,mae_com_clima,skill_clima_vs_sem_clima,ic95_inf,ic95_sup,h1_suportada_ic95
+1,LightGBM,11.2314,9.8125,0.1263,0.0954,0.1574,True
+1,GLM,33.2126,16.2662,0.5102,0.442,0.5634,True
+2,LightGBM,11.3664,9.902,0.1288,0.0987,0.1603,True
+2,GLM,32.3535,16.1879,0.4997,0.4252,0.5602,True
+4,LightGBM,13.8248,11.2731,0.1846,0.1542,0.2138,True
+4,GLM,28.3162,15.1418,0.4653,0.3848,0.534,True
+8,LightGBM,16.0725,15.211,0.0536,0.0241,0.0851,True
+8,GLM,21.9941,14.1434,0.3569,0.2922,0.4154,True
