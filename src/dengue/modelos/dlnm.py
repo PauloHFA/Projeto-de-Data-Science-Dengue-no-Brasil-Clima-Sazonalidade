@@ -180,3 +180,4 @@ class ModeloDLNM:
         fig.savefig(cam_fig, dpi=180)
         plt.close(fig)
         return cam_fig
+

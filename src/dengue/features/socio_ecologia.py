@@ -119,3 +119,4 @@ def estimar_vulnerabilidade_hidrica_municipal(
         )
 
     return pd.DataFrame(linhas)
+

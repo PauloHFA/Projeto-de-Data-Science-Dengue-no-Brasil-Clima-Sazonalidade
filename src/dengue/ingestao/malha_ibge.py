@@ -150,3 +150,4 @@ def carregar_ou_baixar_catalogo_223_municipios_pb(
         caminho_manifesto=diretorio_raw / "manifesto_hashes.json",
     )
     return df
+
