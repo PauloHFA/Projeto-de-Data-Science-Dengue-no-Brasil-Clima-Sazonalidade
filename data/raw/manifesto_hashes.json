@@ -95,5 +95,41 @@
       ],
       "n_registros": 9378
     }
+  },
+  {
+    "arquivo": "malha_municipios_pb.geojson",
+    "caminho_relativo": "malha_municipios_pb.geojson",
+    "fonte": "IBGE_SERVICO_DADOS_MALHAS_GEOJSON_PB",
+    "versao": "2022_minima",
+    "sha256": "7d40078216561fccfeecffa648a2ea89e215c31c39f0e961b49854cc6e858a86",
+    "tamanho_bytes": 86469,
+    "data_ingestao_utc": "2026-10-22T17:44:21.392252+00:00",
+    "metadados": {
+      "uf": "PB",
+      "n_poligonos": 223
+    }
+  },
+  {
+    "arquivo": "ibge_populacao_pb_223_municipios.parquet",
+    "caminho_relativo": "ibge_populacao_pb_223_municipios.parquet",
+    "fonte": "IBGE_LOCALIDADES_E_CENSO2022_PB_223_MUNICIPIOS",
+    "versao": "2022_completo_223_municipios",
+    "sha256": "286bbc26b91c1fcb6889b1d47fffe769502d87ad8d82e5b91996d9886c90d2f7",
+    "tamanho_bytes": 17472,
+    "data_ingestao_utc": "2026-10-22T17:44:21.775422+00:00",
+    "metadados": {
+      "uf": "PB",
+      "n_municipios": 223,
+      "n_registros": 2230
+    }
+  },
+  {
+    "arquivo": "teleconexoes_oceanicas_enso_2015_2024.parquet",
+    "caminho_relativo": "teleconexoes_oceanicas_enso_2015_2024.parquet",
+    "fonte": "NOAA_CPC_HISTORICO_ENSO_E_DIPOLO_ATLANTICO",
+    "versao": "2015_2024",
+    "sha256": "c155f28c3dec13c0dcc74f2d15e5e75267f626bd8369b0a42e288a05850e5da6",
+    "tamanho_bytes": 4230,
+    "data_ingestao_utc": "2026-10-22T17:46:38.668137+00:00"
   }
 ]
