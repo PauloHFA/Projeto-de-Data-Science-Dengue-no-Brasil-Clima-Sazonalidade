@@ -24,6 +24,10 @@ from dengue.features.engenharia import (
     listar_colunas_features,
 )
 from dengue.ingestao.ibge import carregar_ou_baixar_populacao_pb
+from dengue.ingestao.infodengue import (
+    carregar_ou_baixar_infodengue_pb,
+    comparar_com_benchmark_infodengue,
+)
 from dengue.ingestao.inmet import carregar_ou_baixar_clima_pb
 from dengue.ingestao.sinan import carregar_ou_baixar_sinan_pb
 from dengue.modelos.baselines import ModeloPersistencia, ModeloSeasonalNaive
@@ -232,6 +236,22 @@ def etapa_train() -> pd.DataFrame:
     return df_consolidado
 
 
+def etapa_infodengue() -> pd.DataFrame:
+    """Passo B: Baixa a série histórica do InfoDengue (Fiocruz/FGV) e compara com o pipeline (Seção 3 e 5.7)."""
+    print("[Passo B] Executando ingestão e benchmark do InfoDengue (Fiocruz/FGV)...")
+    df_pop = carregar_ou_baixar_populacao_pb(RAW_DIR)
+    df_infodengue = carregar_ou_baixar_infodengue_pb(df_pop=df_pop, diretorio_raw=RAW_DIR, forcar_download=True)
+    
+    caminho_painel = PROCESSED_DIR / "painel_semanal_pb.parquet"
+    if caminho_painel.exists() and not df_infodengue.empty:
+        painel = pd.read_parquet(caminho_painel)
+        df_comp, caminhos_fig = comparar_com_benchmark_infodengue(painel, df_infodengue)
+        print(f"  -> Benchmark comparado para {len(df_comp)} municípios. Relatório salvo em reports/comparacao_infodengue_pb.csv.")
+        if caminhos_fig:
+            print(f"  -> Gráfico salvo em {caminhos_fig[0]}.")
+    return df_infodengue
+
+
 def etapa_report() -> None:
     """Fase 5/6: Análises P2, P3, P4, H2, H3, TreeSHAP, GLM IRRs, resíduos, sensibilidade e figuras."""
     print("[4/4] Executando Fase 5 (Interpretação, Robustez, H2, H3, SHAP, Resíduos, Sensibilidade) e Relatório...")
@@ -310,6 +330,8 @@ def main(argv: list[str] | None = None) -> int:
 
     if comando == "data":
         etapa_data()
+    elif comando == "infodengue":
+        etapa_infodengue()
     elif comando == "features":
         etapa_features()
     elif comando == "train":

@@ -50,3 +50,4 @@ def test_carregar_infodengue_pb(tmp_path) -> None:
     df_info = carregar_ou_baixar_infodengue_pb(df_pop, diretorio_raw=tmp_path, limite_municipios=1)
     assert isinstance(df_info, pd.DataFrame)
     assert (tmp_path / "infodengue_benchmark_pb.parquet").exists()
+

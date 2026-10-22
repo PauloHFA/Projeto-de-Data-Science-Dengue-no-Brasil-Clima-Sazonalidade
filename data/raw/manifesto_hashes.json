@@ -62,5 +62,38 @@
         "CS_SEXO"
       ]
     }
+  },
+  {
+    "arquivo": "infodengue_benchmark_pb.parquet",
+    "caminho_relativo": "infodengue_benchmark_pb.parquet",
+    "fonte": "INFODENGUE_FIOCRUZ_FGV_API_PUBLICA",
+    "versao": "alertcity_api_2015_2024",
+    "sha256": "6d903b5cc44cb10bf030ecaf99bd43f9d950cd18470740a11d426b775dea78ff",
+    "tamanho_bytes": 165660,
+    "data_ingestao_utc": "2026-10-22T16:35:31.423541+00:00",
+    "metadados": {
+      "uf": "PB",
+      "municipios": [
+        "250110",
+        "250180",
+        "250310",
+        "250320",
+        "250370",
+        "250400",
+        "250430",
+        "250510",
+        "250630",
+        "250700",
+        "250750",
+        "250890",
+        "250970",
+        "251080",
+        "251210",
+        "251370",
+        "251620",
+        "251660"
+      ],
+      "n_registros": 9378
+    }
   }
 ]
