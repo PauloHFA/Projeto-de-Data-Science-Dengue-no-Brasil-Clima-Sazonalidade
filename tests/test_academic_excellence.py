@@ -57,3 +57,4 @@ def test_dlnm_cross_basis_e_ajuste() -> None:
     assert len(df_rr) > 0
     assert "risco_relativo_rr" in df_rr.columns
     assert (df_rr["risco_relativo_rr"] > 0).all()
+

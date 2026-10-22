@@ -207,3 +207,4 @@ def gerar_mapa_coropletico_lisa(
     plt.close(fig_png)
 
     return cam_csv, cam_png
+
