@@ -1,9 +1,9 @@
 mesorregiao,periodo_sazonal,n_semanas_mun,incidencia_observada_media,incidencia_prevista_media,vies_medio_residuo,mae,rmse,cobertura_80,cobertura_95
-Agreste Paraibano,Alta_Transmissao (SE 12-24),104,39.57,34.67,4.9003,14.0224,19.8545,0.8269,0.9423
-Agreste Paraibano,Baixa_Transmissao (Demais SE),316,6.79,3.73,3.0641,3.861,7.4739,0.8671,0.9873
-Borborema,Alta_Transmissao (SE 12-24),78,30.94,22.18,8.7603,15.5921,23.4943,0.6923,0.9231
-Borborema,Baixa_Transmissao (Demais SE),237,3.7,1.72,1.974,3.1578,6.3758,0.8608,0.9916
-Mata Paraibana,Alta_Transmissao (SE 12-24),130,160.15,130.35,29.7994,40.1877,52.3811,0.5615,0.7077
-Mata Paraibana,Baixa_Transmissao (Demais SE),395,27.63,24.66,2.9666,9.1532,16.2671,0.7468,0.9316
-Sertao Paraibano,Alta_Transmissao (SE 12-24),156,115.3,99.67,15.6275,30.8185,42.6735,0.6474,0.8141
-Sertao Paraibano,Baixa_Transmissao (Demais SE),474,15.16,11.22,3.9378,6.3619,12.4516,0.8038,0.9726
+Agreste Paraibano,Alta_Transmissao (SE 12-24),104,8.87,13.23,-4.3628,8.4605,12.4681,0.8654,1.0
+Agreste Paraibano,Baixa_Transmissao (Demais SE),312,4.04,2.15,1.8932,3.0754,8.2282,0.8558,0.9679
+Borborema,Alta_Transmissao (SE 12-24),78,48.34,33.02,15.3241,31.4667,45.3576,0.7308,0.9359
+Borborema,Baixa_Transmissao (Demais SE),234,24.82,9.86,14.9612,17.6144,43.0027,0.7906,0.8974
+Mata Paraibana,Alta_Transmissao (SE 12-24),130,10.72,17.15,-6.4308,8.3801,11.9256,0.8231,1.0
+Mata Paraibana,Baixa_Transmissao (Demais SE),390,6.43,3.55,2.8773,3.7949,10.7598,0.8282,0.9641
+Sertao Paraibano,Alta_Transmissao (SE 12-24),156,18.69,21.38,-2.6936,14.5901,23.3291,0.7436,0.9808
+Sertao Paraibano,Baixa_Transmissao (Demais SE),468,6.71,2.18,4.5343,5.4626,18.3639,0.8141,0.9573

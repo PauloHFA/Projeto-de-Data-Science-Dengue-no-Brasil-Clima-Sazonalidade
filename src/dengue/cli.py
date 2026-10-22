@@ -34,7 +34,11 @@ from dengue.modelos.baselines import ModeloPersistencia, ModeloSeasonalNaive
 from dengue.modelos.estatisticos import ModeloGLMContagem
 from dengue.modelos.ml import ModeloLightGBMQuantilico
 from dengue.qualidade.contratos import validar_contrato_clima, validar_contrato_populacao
-from dengue.qualidade.limpeza import construir_painel_semanal, limpar_notificacoes_com_funil
+from dengue.qualidade.limpeza import (
+    construir_painel_semanal,
+    construir_painel_semanal_infodengue,
+    limpar_notificacoes_com_funil,
+)
 from dengue.validacao.metricas import bootstrap_blocos_skill, resumir_metricas_modelo
 from dengue.validacao.robustez import (
     analisar_residuos_por_periodo_e_regiao,
@@ -52,27 +56,33 @@ from dengue.visualizacao.graficos import (
 )
 
 
-def etapa_data() -> pd.DataFrame:
-    """Fase 1: Ingestão de dados (PB), validação de contratos Pandera e limpeza com funil de exclusão."""
+def etapa_data(usar_dados_reais_infodengue: bool = True) -> pd.DataFrame:
+    """Fase 1: Ingestão de dados (PB), validação de contratos Pandera e geração do painel semanal."""
     print("[1/4] Executando ingestão e controle de qualidade (UF = PB)...")
     INTERIM_DIR.mkdir(parents=True, exist_ok=True)
     PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
 
     df_pop = validar_contrato_populacao(carregar_ou_baixar_populacao_pb(RAW_DIR))
     df_clima = validar_contrato_clima(carregar_ou_baixar_clima_pb(RAW_DIR))
-    df_sinan_bruto = carregar_ou_baixar_sinan_pb(df_pop=df_pop, df_clima=df_clima, diretorio_raw=RAW_DIR)
 
+    # Ingestão e funil de exclusão do SINAN (REG-12)
+    df_sinan_bruto = carregar_ou_baixar_sinan_pb(df_pop=df_pop, df_clima=df_clima, diretorio_raw=RAW_DIR)
     municipios_pb = df_pop["municipio"].unique().tolist()
     df_limpo, df_funil = limpar_notificacoes_com_funil(df_sinan_bruto, municipios_validos=municipios_pb)
-
     df_limpo.to_parquet(INTERIM_DIR / "sinan_notificacoes_limpas_pb.parquet", index=False)
     df_funil.to_csv(INTERIM_DIR / "funil_exclusao_sinan_pb.csv", index=False)
 
-    painel = construir_painel_semanal(df_limpo, df_pop=df_pop, df_clima=df_clima)
-    painel.to_parquet(PROCESSED_DIR / "painel_semanal_pb.parquet", index=False)
+    # Ingestão dos dados reais observados do InfoDengue (Fiocruz/FGV)
+    df_infodengue = carregar_ou_baixar_infodengue_pb(df_pop=df_pop, diretorio_raw=RAW_DIR)
 
-    print(f"  -> Notificações brutas: {len(df_sinan_bruto)} | Casos prováveis limpos: {len(df_limpo)}")
-    print(f"  -> Painel semanal salvo com {len(painel)} linhas ({painel['municipio'].nunique()} municípios da PB).")
+    if usar_dados_reais_infodengue and df_infodengue is not None and not df_infodengue.empty:
+        print("  -> Conectando séries reais observadas do InfoDengue (Fiocruz/FGV) ao painel semanal...")
+        painel = construir_painel_semanal_infodengue(df_infodengue, df_pop=df_pop, df_clima=df_clima)
+    else:
+        painel = construir_painel_semanal(df_limpo, df_pop=df_pop, df_clima=df_clima)
+
+    painel.to_parquet(PROCESSED_DIR / "painel_semanal_pb.parquet", index=False)
+    print(f"  -> Painel semanal consolidado com {len(painel)} linhas ({painel['municipio'].nunique()} municípios da PB).")
     return painel
 
 
