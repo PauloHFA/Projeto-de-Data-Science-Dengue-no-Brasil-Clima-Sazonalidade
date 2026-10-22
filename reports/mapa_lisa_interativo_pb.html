@@ -284,30 +284,30 @@
       attributionControl: false
     });
 
-    // Camadas Base 100% Gratuitas, Open-Source e Sem Necessidade de API Key
-    const camadaOSM = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      maxZoom: 19,
-      attribution: '&copy; OpenStreetMap'
+    // Camadas Base 100% Gratuitas da Esri (Não bloqueiam requisições locais file:// e não exigem API Key)
+    const camadaEsriTopo = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
+      maxZoom: 18,
+      attribution: 'Tiles &copy; Esri, DeLorme, NAVTEQ, TomTom'
     });
 
     const camadaEsriGray = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
       maxZoom: 16,
-      attribution: 'Esri, HERE'
+      attribution: 'Tiles &copy; Esri, HERE'
     });
 
     const camadaSatelite = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
       maxZoom: 18,
-      attribution: 'Esri World Imagery'
+      attribution: 'Tiles &copy; Esri, Maxar, Earthstar Geographics'
     });
 
-    // Define OpenStreetMap como camada padrão (100% gratuito e livre)
-    camadaOSM.addTo(map);
+    // Define Esri Topo Map como padrão (estável, sem bloqueio 403 e com geografia rica)
+    camadaEsriTopo.addTo(map);
 
     // Controle seletor de mapa base (canto inferior esquerdo)
     L.control.layers({
-      "🗺️ Ruas (OpenStreetMap)": camadaOSM,
-      "🏢 Neutro Claro (Esri)": camadaEsriGray,
-      "🛰️ Satélite (Esri)": camadaSatelite
+      "🗺️ Relevo e Ruas (Esri Topo)": camadaEsriTopo,
+      "🏢 Fundo Neutro Claro (Esri)": camadaEsriGray,
+      "🛰️ Imagem de Satélite (Esri)": camadaSatelite
     }, null, { position: 'bottomleft' }).addTo(map);
 
     let camadaGeoJSON;
