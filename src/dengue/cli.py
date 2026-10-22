@@ -48,6 +48,10 @@ from dengue.validacao.robustez import (
     extrair_importancia_shap_e_glm,
 )
 from dengue.validacao.split import rolling_origin, separar_desenvolvimento_e_teste_final
+from dengue.visualizacao.dashboard import (
+    gerar_dashboard_interativo_html,
+    gerar_graficos_visuais_leigos,
+)
 from dengue.visualizacao.graficos import (
     calcular_associacao_defasagens_p2,
     calcular_autocorrelacao_espacial_moran_p4,
@@ -328,7 +332,20 @@ def etapa_report() -> None:
         df_h2=df_h2,
         df_notificacoes_limpas=df_limpo,
     )
-    print(f"  -> {len(caminhos_fig)} figuras geradas em {REPORTS_DIR / 'figures'}.")
+    # Gera infográficos de fácil interpretação para leigos e dashboard executivo interativo em HTML
+    figs_visuais = gerar_graficos_visuais_leigos(
+        painel=painel,
+        df_h1=pd.read_csv(REPORTS_DIR / "teste_hipotese_h1_pb.csv"),
+        df_h2=df_h2,
+        df_shap=df_shap,
+    )
+    dash_html = gerar_dashboard_interativo_html(
+        painel=painel,
+        df_h1=pd.read_csv(REPORTS_DIR / "teste_hipotese_h1_pb.csv"),
+        df_h2=df_h2,
+    )
+    print(f"  -> {len(caminhos_fig) + len(figs_visuais)} figuras geradas em {REPORTS_DIR / 'figures'}.")
+    print(f"  -> Dashboard visual executivo gerado em: {dash_html}")
     print(f"  -> Índice I de Moran (P4 - PB): I = {moran_p4['moran_i']} (p = {moran_p4['p_valor_permutacao']}).")
     print(f"  -> Tabelas de Fase 5 salvas: H2 ({len(df_h2)} estratos), H3 ({len(df_h3)} horizontes), SHAP ({len(df_shap)} features), Resíduos ({len(df_residuos)} células) e Sensibilidade ({len(df_sens)} cenários).")
 
