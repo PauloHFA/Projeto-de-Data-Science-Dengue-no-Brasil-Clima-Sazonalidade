@@ -538,11 +538,31 @@ def gerar_mapa_coropletico_lisa(
       attributionControl: false
     }});
 
-    // Camada Base: CartoDB Positron (Limpo, profissional e com nomes de ruas/cidades)
-    const cartoPositron = L.tileLayer('https://{{s}}.basemaps.cartocdn.com/light_all/{{z}}/{{x}}/{{y}}{{r}}.png', {{
+    // Camadas Base 100% Gratuitas, Open-Source e Sem Necessidade de API Key
+    const camadaOSM = L.tileLayer('https://tile.openstreetmap.org/{{z}}/{{x}}/{{y}}.png', {{
       maxZoom: 19,
-      subdomains: 'abcd'
-    }}).addTo(map);
+      attribution: '&copy; OpenStreetMap'
+    }});
+
+    const camadaEsriGray = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{{z}}/{{y}}/{{x}}', {{
+      maxZoom: 16,
+      attribution: 'Esri, HERE'
+    }});
+
+    const camadaSatelite = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{{z}}/{{y}}/{{x}}', {{
+      maxZoom: 18,
+      attribution: 'Esri World Imagery'
+    }});
+
+    // Define OpenStreetMap como camada padrão (100% gratuito e livre)
+    camadaOSM.addTo(map);
+
+    // Controle seletor de mapa base (canto inferior esquerdo)
+    L.control.layers({{
+      "🗺️ Ruas (OpenStreetMap)": camadaOSM,
+      "🏢 Neutro Claro (Esri)": camadaEsriGray,
+      "🛰️ Satélite (Esri)": camadaSatelite
+    }}, null, {{ position: 'bottomleft' }}).addTo(map);
 
     let camadaGeoJSON;
     let modoAtual = 'lisa';
