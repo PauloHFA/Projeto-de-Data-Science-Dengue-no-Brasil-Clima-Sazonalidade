@@ -33,7 +33,32 @@ Este estudo tem caráter exclusivamente **educacional e analítico**. As estimat
 
 1. **Associação por Defasagens Climáticas – P2 (`analise_defasagens_p2_pb.csv`):** As séries observadas confirmam correlação de Spearman estatisticamente significante com a incidência futura, com destaque para a umidade relativa e temperatura nas defasagens de 4 a 12 semanas.
 2. **Clusters Sazonais – P3 (`clusters_sazonais_p3_pb.csv`):** Os municípios do litoral (*Mata Paraibana*) concentram picos entre as SE 19 e 22 (maio a junho), enquanto o interior semiárido (*Sertão* e *Agreste*) antecipa a transmissão para março e abril (SE 13 a 18), acompanhando a quadra chuvosa regional.
-3. **Autocorrelação Espacial – P4 (`autocorrelacao_moran_p4_pb.json`):** O Índice Global de Moran sobre a taxa média decenal foi de **$I = 0,0116$** ($p = 0,532$ em 999 permutações), indicando que, na escala ampla entre mesorregiões muito heterogêneas (Litoral úmido vs Sertão semiárido), a variação climática e de altitude dissipa a dependência espacial linear simples.
+3. **Autocorrelação Espacial Global – P4 (`autocorrelacao_moran_p4_pb.json`):** O Índice Global de Moran sobre a taxa média decenal foi de **$I = 0,0116$** ($p = 0,532$ em 999 permutações), indicando que, na escala ampla macroregional, a grande heterogeneidade geográfica dissipa a dependência espacial linear simplista.
+
+### 3.1 Padrão Espacial Rigoroso: Análise de Clusters LISA (Local Moran)
+Com base na **malha vetorial oficial dos 223 municípios da Paraíba (IBGE)** e matriz de contiguidade **Queen** (fronteiras compartilhadas), foram calculados os Indicadores Locais de Associação Espacial (**LISA - Anselin, 1995**):
+- **Tabela Completa de Clusters:** [`lisa_clusters_pb.csv`](lisa_clusters_pb.csv)
+- **Mapa Coroplético Interativo dos 223 Municípios:** [`mapa_lisa_interativo_pb.html`](mapa_lisa_interativo_pb.html)
+
+![Distribuição dos Municípios da Paraíba por Padrão Espacial LISA](figures/mapa_lisa_clusters_pb.png)
+
+A análise revela que os focos epidêmicos concentram-se em clusters localizados e anomalias de transição (Alto-Baixo e Baixo-Alto), comprovando a importância da descentralização da vigilância vetorial.
+
+---
+
+### 3.2 Fatores Sócio-Ecológicos do Semiárido: Água, Cisternas e ENSO
+No semiárido paraibano (Sertão e Borborema), a dinâmica do vetor responde a determinantes sócio-ecológicos particulares:
+1. **Índice de Vulnerabilidade de Abastecimento Hídrico Domiciliar ([`vulnerabilidade_hidrica_semiarido_pb.csv`](vulnerabilidade_hidrica_semiarido_pb.csv)):** A intermitência no fornecimento pela rede geral obriga as famílias a manter reservatórios domiciliares artificiais (cisternas, caixas d'água destampadas e tambores), criando criadouros perenes que desacoplam a reprodução do mosquito da pluviosidade natural.
+2. **Teleconexões Oceânicas ENSO / El Niño ([`teleconexoes_oceanicas_enso_2015_2024.parquet`](../data/raw/teleconexoes_oceanicas_enso_2015_2024.parquet)):** Anos de El Niño forte (como 2015–2016 e 2023–2024, com anomalias de TSM no Niño 3.4 superiores a $+1,2^\circ\text{C}$) provocaram secas severas que agravaram a necessidade de estocagem doméstica de água.
+
+---
+
+### 3.3 Modelos de Defasagens Distribuídas Não-Lineares (DLNM - Gasparrini et al., 2010)
+Avaliamos a relação biológica dose-resposta entre temperatura média semanal e a incidência através de uma **cross-basis bidimensional de B-splines cúbicas** com defasagens de 1 a 12 semanas ([`dlnm_superficie_risco_pb.csv`](dlnm_superficie_risco_pb.csv)):
+
+![Superfície Bidimensional de Risco Relativo DLNM (Temperatura x Defasagens)](figures/fig8_dlnm_superficie_temperatura.png)
+
+A superfície DLNM identifica claramente o **ótimo térmico biológico da transmissão entre $26,5^\circ\text{C}$ e $28,5^\circ\text{C}$**, com impacto máximo de Risco Relativo ($\text{RR} > 1,35$) manifestando-se após **4 a 6 semanas de defasagem** (tempo necessário para o desenvolvimento do ciclo extrínseco do vírus no mosquito).
 
 ---
 
