@@ -1,0 +1,4 @@
+cenario,horizonte,n_linhas_treino,mae_sem_clima,mae_com_clima,skill_clima_vs_sem_clima,ic95_inf,ic95_sup,conclusao_h1_robusta
+1_Padrao_Casos_Provaveis_2015_2022,4,7506,14.0844,11.1069,0.2114,0.177,0.2421,True
+2_Excluindo_Pandemia_COVID_2020_2021,4,5634,13.6183,10.7744,0.2088,0.1694,0.2441,True
+3_Restrito_Confirmados_Sem_Inconclusivos,4,7506,12.7891,10.0694,0.2127,0.1787,0.2432,True

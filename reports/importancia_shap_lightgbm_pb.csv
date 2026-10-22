@@ -1,0 +1,40 @@
+atributo,grupo_variavel,shap_medio_absoluto,importancia_split,participacao_pct
+sen_se_1,Sazonalidade,8.344,67,18.59
+incidencia_100k_lag4,Histórico de Casos / Incidência,7.8665,100,17.52
+incidencia_mm4_lag4,Histórico de Casos / Incidência,5.2171,69,11.62
+chuva_acum_lag5,Clima Defasado,3.4455,80,7.67
+temp_media_lag4,Clima Defasado,3.2975,68,7.35
+incidencia_100k_lag5,Histórico de Casos / Incidência,3.2308,104,7.2
+temp_media_mm4_lag4,Clima Defasado,2.3877,41,5.32
+chuva_acum_lag7,Clima Defasado,2.001,49,4.46
+chuva_acum_mm4_lag4,Clima Defasado,1.271,45,2.83
+umidade_media_lag4,Clima Defasado,1.2612,46,2.81
+temp_media_lag9,Clima Defasado,1.0172,53,2.27
+cos_se_1,Sazonalidade,0.8614,31,1.92
+incidencia_100k_lag8,Histórico de Casos / Incidência,0.6061,24,1.35
+temp_media_lag6,Clima Defasado,0.4611,27,1.03
+incidencia_100k_lag6,Histórico de Casos / Incidência,0.4589,32,1.02
+temp_media_lag11,Clima Defasado,0.4373,27,0.97
+incidencia_100k_lag7,Histórico de Casos / Incidência,0.3882,17,0.86
+temp_media_lag10,Clima Defasado,0.2744,23,0.61
+chuva_acum_lag11,Clima Defasado,0.2578,23,0.57
+chuva_acum_lag9,Clima Defasado,0.2405,22,0.54
+cos_se_2,Sazonalidade,0.2378,5,0.53
+umidade_media_lag5,Clima Defasado,0.1587,16,0.35
+sen_se_2,Sazonalidade,0.1504,13,0.34
+temp_media_lag12,Clima Defasado,0.149,19,0.33
+umidade_media_lag12,Clima Defasado,0.1463,9,0.33
+temp_media_lag7,Clima Defasado,0.1323,13,0.29
+chuva_acum_lag12,Clima Defasado,0.1238,13,0.28
+chuva_acum_lag10,Clima Defasado,0.0982,13,0.22
+umidade_media_lag7,Clima Defasado,0.0939,9,0.21
+umidade_media_lag9,Clima Defasado,0.0474,8,0.11
+temp_media_lag8,Clima Defasado,0.0459,18,0.1
+umidade_media_lag11,Clima Defasado,0.0456,10,0.1
+umidade_media_lag8,Clima Defasado,0.0394,4,0.09
+temp_media_lag5,Clima Defasado,0.0269,7,0.06
+umidade_media_lag6,Clima Defasado,0.0246,8,0.05
+umidade_media_lag10,Clima Defasado,0.0178,3,0.04
+chuva_acum_lag8,Clima Defasado,0.0176,2,0.04
+chuva_acum_lag6,Clima Defasado,0.0132,2,0.03
+chuva_acum_lag4,Clima Defasado,0.0,0,0.0

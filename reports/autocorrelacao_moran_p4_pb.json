@@ -1,0 +1,7 @@
+{
+  "moran_i": 0.7234,
+  "valor_esperado": -0.0588,
+  "p_valor_permutacao": 0.001,
+  "n_municipios": 18,
+  "k_vizinhos": 4
+}
