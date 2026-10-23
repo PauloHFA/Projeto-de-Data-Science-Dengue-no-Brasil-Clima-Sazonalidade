@@ -32,3 +32,11 @@ htmlcov/
 *_files/
 .ipynb_checkpoints/
 mlruns/
+
+# Documentos finais confidenciais / acadêmicos privados (mantidos apenas localmente)
+*.pdf
+reports/*.pdf
+*.log
+.env
+.env.*
+
