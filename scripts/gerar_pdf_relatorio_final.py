@@ -370,7 +370,7 @@ def gerar_relatorio_pdf_completo(caminho_saida: Path = Path("reports/relatorio_f
 
     caminho_fig_fatores = Path("reports/figures/infografico_fatores_explicativos.png")
     if caminho_fig_fatores.exists():
-        story.append(Image(str(caminho_fig_fatores), width=480, height=180))
+        story.append(Image(str(caminho_fig_fatores), width=500, height=195))
 
     story.append(
         Paragraph(
@@ -640,11 +640,11 @@ def gerar_relatorio_pdf_completo(caminho_saida: Path = Path("reports/relatorio_f
     story.append(t_sim)
     story.append(Spacer(1, 10))
 
-    story.append(Paragraph("8. Roteiro Estratégico para Defesa em Bancas Acadêmicas", estilo_h1))
+    story.append(Paragraph("8. Resultados e Observações", estilo_h1))
     story.append(
         Paragraph(
-            "Para apresentar este projeto em bancas de graduação, mestrado, Iniciação Científica (PIBIC) ou congressos, "
-            "adote os seguintes argumentos estruturados:",
+            "A consolidação dos achados empíricos, premissas metodológicas e ressalvas técnicas do estudo "
+            "estrutura-se nas seguintes observações fundamentais:",
             estilo_corpo,
         )
     )
@@ -652,16 +652,30 @@ def gerar_relatorio_pdf_completo(caminho_saida: Path = Path("reports/relatorio_f
     box_defesa = [
         [
             Paragraph(
-                "<b>1. Honestidade Intelectual e Rigor Estatístico (REG-13):</b><br/>"
-                "Ressalte que a Hipótese H1 foi refutada no nível estadual agregado porque o intervalo de confiança bootstrap cruzou o zero. "
-                "Isso demonstra que a equipe seguiu a ciência estrita e evitou qualquer forma de <i>p-hacking</i> ou viés de confirmação.<br/><br/>"
-                "<b>2. O Fenômeno Sócio-Ecológico do Nordeste Brasileiro:</b><br/>"
-                "Explique que o mosquito Aedes aegypti no semiárido paraibano não depende da chuva natural, mas sim do armazenamento domiciliar "
-                "de água (cisternas e tambores destampados) mantido pela população devido à intermitência do abastecimento municipal.<br/><br/>"
-                "<b>3. Incerteza Calibrada via Conformal Prediction:</b><br/>"
-                "Enfatize que as previsões não assumem distribuição Gaussiana dos resíduos; os intervalos de 95% cobrem 96% a 97% das semanas reais.<br/><br/>"
-                "<b>4. Demonstração Prática:</b><br/>"
-                "Abra o <b>Mapa LISA</b> e o <b>Simulador Interativo</b> no navegador para demonstrar o projeto em tempo real perante a banca.",
+                "<b>1. Rigor Metodológico e Refutação da Hipótese H1 (REG-13):</b><br/>"
+                "Constatar que, no nível macroestadual agregado, a inclusão de covariáveis meteorológicas não produziu "
+                "ganho de <i>skill</i> estatisticamente significante (+0,59%, com intervalo de confiança bootstrap em blocos cruzando o zero: "
+                "[-0,96%, +2,02%]). Reconhecer essa refutação com integridade científica e estrita ausência de <i>p-hacking</i>, "
+                "concluindo que a inércia autorregressiva recente e o ciclo sazonal determinístico absorvem a quase totalidade "
+                "da variabilidade estadual de curto prazo.<br/><br/>"
+                "<b>2. Heterogeneidade Territorial e Confirmação da Hipótese H2:</b><br/>"
+                "Identificar que o sinal meteorológico é altamente condicionado pela escala urbana e pelo regime bioclimático. Em cidades polo "
+                "(>200 mil habitantes – João Pessoa e Campina Grande), verificar uma redução real e estatisticamente significante de erro de "
+                "<b>+8,25%</b> (IC 95%: [+3,39%, +14,11%]), e de <b>+3,91%</b> na Mata Paraibana litorânea, demonstrando que a meteorologia "
+                "é altamente preditiva onde há continuidade de transmissão e densidade demográfica crítica.<br/><br/>"
+                "<b>3. Caracterização da Assinatura Sócio-Ecológica do Semiárido:</b><br/>"
+                "Observar o desacoplamento empírico entre chuvas naturais e transmissão de dengue no Sertão e na Borborema, "
+                "decorrente do armazenamento doméstico perene de água (cisternas, caixas destampadas e tambores) imposto pela escassez "
+                "e intermitência do abastecimento público. O índice IVHD revelou que a vulnerabilidade hídrica domiciliar constitui "
+                "o principal substrato ecológico do vetor nas zonas áridas.<br/><br/>"
+                "<b>4. Calibração de Incerteza sem Premissas Gaussianas (Conformal Prediction):</b><br/>"
+                "Evitar suposições de normalidade para os resíduos epidemiológicos, adotando Conformal Prediction para derivar bandas "
+                "de incerteza de 95% empíricas, alcançando cobertura real de 96% a 97% no período de teste (2023–2024), mantendo a calibração "
+                "mesmo diante de semanas epidêmicas extremas.<br/><br/>"
+                "<b>5. Ressalvas Metodológicas e Recomendações Operacionais:</b><br/>"
+                "Ressalvar a presença de atrasos na digitação de fichas do Sinan nos horizontes imediatos (h=1 e h=2 semanas), recomendando "
+                "o emprego contínuo de fatores de correção empírica (<i>nowcasting</i>) e a adoção conjunta do Mapa LISA e do Simulador de Cenários "
+                "como instrumentos práticos para direcionamento de equipes de campo e controle vetorial focal.",
                 estilo_callout,
             )
         ]
@@ -699,3 +713,4 @@ def gerar_relatorio_pdf_completo(caminho_saida: Path = Path("reports/relatorio_f
 if __name__ == "__main__":
     caminho = gerar_relatorio_pdf_completo()
     print(f"Relatório PDF gerado com sucesso em: {caminho.resolve()}")
+

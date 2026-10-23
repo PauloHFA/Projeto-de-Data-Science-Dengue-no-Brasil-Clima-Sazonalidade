@@ -161,24 +161,28 @@ $$\text{Skill} = 1 - \frac{\text{MAE}_{\text{Com Clima}}}{\text{MAE}_{\text{Sem 
 
 ---
 
-## 6. 🎓 Roteiro Estratégico para Defesa em Bancas Acadêmicas
+## 6. 🔬 Resultados, Discussão e Observações Metodológicas
 
-Se for apresentar este projeto perante uma banca de Ciência da Computação, Saúde Coletiva ou Estatística, utilize este roteiro de argumentação:
+A consolidação dos achados empíricos, premissas metodológicas e ressalvas técnicas do estudo estrutura-se nas seguintes observações fundamentais:
 
-1. **Destaque a Honestidade Científica (`REG-13`):**
-   - *Argumento:* "Muitos trabalhos de ciência de dados forçam a conclusão de que 'o clima sempre prevê a dengue'. Nosso estudo comprova, com teste de bootstrap em blocos, que no agregado estadual o ganho é estatisticamente nulo (IC cruza o zero), mas quando estratificado por densidade demográfica (H2), o clima se torna essencial nas metrópoles (+8,25% de precisão)."
-   - *Impacto na banca:* Demonstra maturidade científica e ausência de *p-hacking*.
+1. **Rigor Metodológico e Refutação da Hipótese H1 (`REG-13`):**
+   - Constatar que, no nível macroestadual agregado, a inclusão de covariáveis meteorológicas não produziu ganho de *skill* estatisticamente significante ($+0,59\%$, com intervalo de confiança bootstrap em blocos cruzando o zero: `[-0,96%, +2,02%]`).
+   - Reconhecer essa refutação com integridade científica e estrita ausência de *p-hacking*, concluindo que a inércia autorregressiva recente e o ciclo sazonal determinístico absorvem a quase totalidade da variabilidade estadual de curto prazo.
 
-2. **A "Assinatura Paraibana" do Semiárido:**
-   - *Argumento:* "No Sertão e na Borborema, o Aedes aegypti tem dinâmica socioecológica: o mosquito não espera a chuva cair; ele prolifera nas caixas d'água destampadas, tambores e cisternas que as famílias mantêm devido à intermitência no abastecimento (capturado pelo nosso índice IVHD)."
-   - *Impacto na banca:* Conecta os modelos estatísticos com a geografia humana e a saúde pública real do Nordeste brasileiro.
+2. **Heterogeneidade Territorial e Confirmação da Hipótese H2:**
+   - Identificar que o sinal meteorológico é altamente condicionado pela escala urbana e pelo regime bioclimático.
+   - Em cidades polo (>200 mil habitantes – João Pessoa e Campina Grande), verificar uma redução real e estatisticamente significante de erro de **+8,25%** (IC 95%: `[+3,39%, +14,11%]`), e de **+3,91%** na Mata Paraibana litorânea, demonstrando que a meteorologia é altamente preditiva onde há continuidade de transmissão e densidade demográfica crítica.
 
-3. **Incerteza sem Suposição Normal (Conformal Prediction):**
-   - *Argumento:* "Não assumimos que os erros da dengue seguem uma distribuição Gaussiana. Utilizamos Conformal Prediction para derivar bandas de incerteza de 95% empíricas, que garantem cobertura mesmo durante surtos e picos atípicos."
+3. **Caracterização da Assinatura Sócio-Ecológica do Semiárido:**
+   - Observar o desacoplamento empírico entre chuvas naturais e transmissão de dengue no Sertão e na Borborema, decorrente do armazenamento doméstico perene de água (cisternas, caixas destampadas e tambores) imposto pela escassez e intermitência do abastecimento público.
+   - O índice IVHD revelou que a vulnerabilidade hídrica domiciliar constitui o principal substrato ecológico do vetor nas zonas áridas.
 
-4. **Demonstração Prática:**
-   - Abra o **Simulador Interativo** ([`simulador_preditivo_dengue_pb.html`](file:///c:/Projetos/Projeto%20de%20Data%20Science%20Dengue/reports/simulador_preditivo_dengue_pb.html)) na frente da banca e mova os sliders de temperatura e armazenamento hídrico para mostrar o modelo reagindo em tempo real.
-   - Abra o **Mapa LISA** ([`mapa_lisa_interativo_pb.html`](file:///c:/Projetos/Projeto%20de%20Data%20Science%20Dengue/reports/mapa_lisa_interativo_pb.html)) e mostre como o gestor público pode navegar pelas 223 cidades para tomar decisões operacionais.
+4. **Calibração de Incerteza sem Premissas Gaussianas (Conformal Prediction):**
+   - Evitar suposições de normalidade para os resíduos epidemiológicos, adotando Conformal Prediction para derivar bandas de incerteza de 95% empíricas, alcançando cobertura real de 96% a 97% no período de teste (2023–2024), mantendo a calibração mesmo diante de semanas epidêmicas extremas.
+
+5. **Ressalvas Metodológicas e Recomendações Operacionais:**
+   - Ressalvar a presença de atrasos na digitação de fichas do Sinan nos horizontes imediatos ($h=1$ e $h=2$ semanas), recomendando o emprego contínuo de fatores de correção empírica (*nowcasting*).
+   - Adotar conjuntamente o **Mapa LISA** e o **Simulador de Cenários** como instrumentos integrados para direcionamento de equipes de campo e controle vetorial focal antes do pico sazonal de março a junho.
 
 ---
 
