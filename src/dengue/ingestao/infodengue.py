@@ -119,10 +119,27 @@ def carregar_ou_baixar_infodengue_pb(
         )
         fonte = "INFODENGUE_FIOCRUZ_FGV_API_PUBLICA"
     else:
-        df_formatado = pd.DataFrame()
+        df_formatado = pd.DataFrame(
+            columns=[
+                "municipio",
+                "municipio_ibge7",
+                "nome_municipio",
+                "semana",
+                "se",
+                "casos_infodengue",
+                "casos_est_nowcast",
+                "casos_est_min",
+                "casos_est_max",
+                "nivel_alerta",
+                "temperatura_infodengue",
+                "umidade_infodengue",
+                "rt_transmissao",
+            ]
+        )
         fonte = "INFODENGUE_OFFLINE_PLACEHOLDER"
 
-    df_formatado = df_formatado.sort_values(["municipio", "semana"]).reset_index(drop=True)
+    if not df_formatado.empty:
+        df_formatado = df_formatado.sort_values(["municipio", "semana"]).reset_index(drop=True)
     df_formatado.to_parquet(caminho_parquet, index=False)
 
     registrar_arquivo_manifesto(
