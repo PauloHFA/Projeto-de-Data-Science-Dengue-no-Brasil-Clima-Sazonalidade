@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from typing import Sequence
+from collections.abc import Sequence
 
 import lightgbm as lgb
 import numpy as np
@@ -90,7 +90,7 @@ class ModeloLightGBMQuantilico:
         # Reajusta com 100% do treino mantendo a correção conformal aprendida
         X_all = self.escalonador.fit_transform(df, self.colunas_features)
         y_all = df["incidencia_100k"].to_numpy(dtype=float)
-        for q, reg in self.modelos_.items():
+        for reg in self.modelos_.values():
             reg.fit(X_all, y_all)
 
         return self
@@ -137,4 +137,3 @@ class ModeloLightGBMQuantilico:
             .sort_values("importancia_split", ascending=False)
             .reset_index(drop=True)
         )
-

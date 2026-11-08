@@ -47,7 +47,7 @@ from dengue.validacao.robustez import (
     avaliar_sensibilidade_limpeza_e_pandemia,
     extrair_importancia_shap_e_glm,
 )
-from dengue.validacao.split import rolling_origin, separar_desenvolvimento_e_teste_final
+from dengue.validacao.split import separar_desenvolvimento_e_teste_final
 from dengue.visualizacao.dashboard import (
     gerar_dashboard_interativo_html,
     gerar_graficos_visuais_leigos,
@@ -180,7 +180,6 @@ def etapa_train() -> pd.DataFrame:
 
     todas_metricas_val: list[pd.DataFrame] = []
     todas_metricas_teste: list[pd.DataFrame] = []
-    preds_h4_teste: pd.DataFrame | None = None
     comparacoes_h1: list[dict[str, Any]] = []
 
     for h in HORIZONTES:
@@ -211,7 +210,6 @@ def etapa_train() -> pd.DataFrame:
         todas_metricas_teste.append(res_teste)
 
         if h == HORIZONTE_PRINCIPAL:
-            preds_h4_teste = preds_teste
             preds_teste.to_parquet(PROCESSED_DIR / "previsoes_teste_final_pb_h4.parquet", index=False)
 
         # Teste formal da Hipótese H1: LightGBM_Com_Clima vs LightGBM_Sem_Clima e GLM_Com_Clima vs GLM_Sem_Clima
@@ -378,4 +376,3 @@ def main(argv: list[str] | None = None) -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-
