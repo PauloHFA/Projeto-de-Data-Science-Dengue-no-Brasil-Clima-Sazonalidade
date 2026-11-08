@@ -8,10 +8,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import plotly.express as px
-import plotly.graph_objects as go
-from plotly.subplots import make_subplots
 
-from dengue.config import FIGURES_DIR, PROCESSED_DIR, REPORTS_DIR
+from dengue.config import FIGURES_DIR, REPORTS_DIR
 
 
 def gerar_graficos_visuais_leigos(
@@ -87,7 +85,6 @@ def gerar_graficos_visuais_leigos(
     # 2. Gráfico "O que move a previsão?" (Donut + Barras de Detalhamento de Alta Resolução)
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(11, 4.3), gridspec_kw={'width_ratios': [1.05, 1.35]})
 
-    grupos_ordem = ['Histórico de Casos / Incidência', 'Clima Defasado', 'Sazonalidade Harmônica']
     rotulos_amigaveis = ['Histórico Recente de Casos', 'Covariáveis Climáticas Defasadas', 'Sazonalidade Harmônica']
     valores = [67.2, 17.6, 15.2]
     cores_fatores = ['#1d4ed8', '#ea580c', '#059669']
@@ -118,7 +115,7 @@ def gerar_graficos_visuais_leigos(
 
     # Barras Horizontais com detalhamento no ax2
     y_pos = [2, 1, 0]
-    for idx, (grp, val, cor, sub) in enumerate(zip(rotulos_amigaveis, valores, cores_fatores, subtextos)):
+    for idx, (grp, val, cor, sub) in enumerate(zip(rotulos_amigaveis, valores, cores_fatores, subtextos, strict=False)):
         y = y_pos[idx]
         ax2.barh(y, 100, height=0.26, color='#f1f5f9', edgecolor='none')
         ax2.barh(y, val, height=0.26, color=cor, edgecolor='none')
@@ -359,4 +356,3 @@ def gerar_dashboard_interativo_html(
 """
     caminho_html.write_text(conteudo_html, encoding="utf-8")
     return caminho_html
-

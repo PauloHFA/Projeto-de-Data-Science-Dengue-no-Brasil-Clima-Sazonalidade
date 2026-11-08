@@ -212,7 +212,7 @@ def comparar_com_benchmark_infodengue(
         if len(muns_plot) == 1:
             axes = [axes]
 
-        for ax, cod_mun in zip(axes, muns_plot):
+        for ax, cod_mun in zip(axes, muns_plot, strict=False):
             dados_m = sub_plot[sub_plot["municipio"] == cod_mun]
             nome_m = dados_m["nome_municipio"].iloc[0]
 

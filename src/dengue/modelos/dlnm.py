@@ -8,10 +8,10 @@ from typing import Any
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-from scipy.interpolate import BSpline
 import statsmodels.api as sm
+from scipy.interpolate import BSpline
 
-from dengue.config import FIGURES_DIR, REPORTS_DIR
+from dengue.config import FIGURES_DIR
 
 
 def gerar_base_bspline(x: np.ndarray, n_knots: int = 3, degree: int = 3) -> np.ndarray:
@@ -20,7 +20,6 @@ def gerar_base_bspline(x: np.ndarray, n_knots: int = 3, degree: int = 3) -> np.n
     if np.isclose(x_min, x_max):
         return np.ones((len(x), 1), dtype=float)
 
-    interior_knots = np.linspace(x_min, x_max, n_knots + 2)[1:-1]
     # Nós aumentados para B-spline com grau degree
     knots = np.concatenate(
         [
@@ -52,14 +51,14 @@ def construir_cross_basis_dlnm(
     Conforme Gasparrini et al. (2010): produto tensorial das bases funcionais.
     """
     n_amostras = len(serie_x)
-    max_lag = max(lags)
+    max(lags)
 
     # Matriz de defasagens (n_amostras x n_lags)
     matriz_lags = np.full((n_amostras, len(lags)), np.nan, dtype=float)
-    for idx_l, l in enumerate(lags):
-        if l < n_amostras:
-            matriz_lags[l:, idx_l] = serie_x[:-l]
-            matriz_lags[:l, idx_l] = serie_x[0]
+    for idx_l, lag in enumerate(lags):
+        if lag < n_amostras:
+            matriz_lags[lag:, idx_l] = serie_x[:-lag]
+            matriz_lags[:lag, idx_l] = serie_x[0]
 
     # Base no espaço dos lags (1..12 semanas)
     vetor_lags = np.array(lags, dtype=float)
@@ -123,13 +122,13 @@ class ModeloDLNM:
 
         linhas = []
         for t in grid_temp:
-            for l in lags:
+            for lag in lags:
                 # Efeito quadrático-spline aproximado do DLNM em relação à temperatura de referência e defasagem
                 dif_temp = t - self.ref_temp
                 # Pico térmico de transmissão biológica ocorre em torno de 27-28°C com defasagem de 4-6 semanas
                 efeito_linear = 0.08 * dif_temp
                 efeito_nao_linear = -0.015 * (dif_temp ** 2) if dif_temp > 0 else -0.03 * (dif_temp ** 2)
-                fator_lag = np.exp(-0.5 * ((l - 5.0) / 2.8) ** 2)
+                fator_lag = np.exp(-0.5 * ((lag - 5.0) / 2.8) ** 2)
 
                 log_rr = (efeito_linear + efeito_nao_linear) * (0.3 + 1.2 * fator_lag)
                 rr = float(np.exp(log_rr))
@@ -137,7 +136,7 @@ class ModeloDLNM:
                 linhas.append(
                     {
                         "temperatura": round(float(t), 1),
-                        "defasagem_semanas": int(l),
+                        "defasagem_semanas": int(lag),
                         "risco_relativo_rr": round(rr, 4),
                         "rr_ic95_inf": round(float(np.exp(log_rr - 0.15)), 4),
                         "rr_ic95_sup": round(float(np.exp(log_rr + 0.15)), 4),
@@ -180,4 +179,3 @@ class ModeloDLNM:
         fig.savefig(cam_fig, dpi=180)
         plt.close(fig)
         return cam_fig
-

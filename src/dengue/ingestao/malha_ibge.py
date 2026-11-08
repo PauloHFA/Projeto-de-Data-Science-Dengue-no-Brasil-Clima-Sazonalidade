@@ -77,7 +77,7 @@ def carregar_ou_baixar_catalogo_223_municipios_pb(
             pontos = []
             def _extrair_pts(lista):
                 if len(lista) == 2 and isinstance(lista[0], (int, float)):
-                    pontos.append(lista)
+                    pontos.append(lista)  # noqa: B023
                 else:
                     for sub in lista:
                         _extrair_pts(sub)
@@ -150,4 +150,3 @@ def carregar_ou_baixar_catalogo_223_municipios_pb(
         caminho_manifesto=diretorio_raw / "manifesto_hashes.json",
     )
     return df
-

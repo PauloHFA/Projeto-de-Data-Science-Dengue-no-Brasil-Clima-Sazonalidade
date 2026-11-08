@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import pandas as pd
-import pandera.pandas as pa
 from pandera.pandas import Check, Column, DataFrameSchema
 
 from dengue.config import ANO_FIM, ANO_INICIO

@@ -5,9 +5,11 @@ from __future__ import annotations
 import numpy as np
 import pandas as pd
 
-from dengue.features.socio_ecologia import estimar_vulnerabilidade_hidrica_municipal, obter_anomalias_oceanicas_enso
+from dengue.features.socio_ecologia import (
+    estimar_vulnerabilidade_hidrica_municipal,
+    obter_anomalias_oceanicas_enso,
+)
 from dengue.modelos.dlnm import ModeloDLNM, construir_cross_basis_dlnm
-from dengue.validacao.espacial_lisa import calcular_lisa_local_moran, construir_vizinhanca_queen_geojson
 
 
 def test_obter_anomalias_oceanicas_enso(tmp_path) -> None:

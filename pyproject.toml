@@ -62,3 +62,5 @@ src = ["src", "tests"]
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "B", "UP"]
+# Existing source includes long prose and embedded HTML; avoid a repository-wide reformat.
+ignore = ["E501"]

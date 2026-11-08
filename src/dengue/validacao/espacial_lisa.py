@@ -9,8 +9,8 @@ from typing import Any
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-from matplotlib.patches import Polygon as MplPolygon
 from matplotlib.collections import PatchCollection
+from matplotlib.patches import Polygon as MplPolygon
 
 from dengue.config import FIGURES_DIR, RAW_DIR, REPORTS_DIR, SEED
 
@@ -31,7 +31,7 @@ def construir_vizinhanca_queen_geojson(geojson_data: dict[str, Any]) -> tuple[li
 
         def _coletar(lista: list[Any]) -> None:
             if len(lista) == 2 and isinstance(lista[0], (int, float)):
-                pts.add((round(float(lista[0]), 3), round(float(lista[1]), 3)))
+                pts.add((round(float(lista[0]), 3), round(float(lista[1]), 3)))  # noqa: B023
             else:
                 for sub in lista:
                     _coletar(sub)
