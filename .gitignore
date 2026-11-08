@@ -33,10 +33,13 @@ htmlcov/
 .ipynb_checkpoints/
 mlruns/
 
-# Documentos finais confidenciais / acadêmicos privados (mantidos apenas localmente)
-*.pdf
-reports/*.pdf
+# Logs e variáveis de ambiente
 *.log
 .env
 .env.*
+
+# Manter PDFs privados por padrão, exceto o relatório final consolidado do estudo
+*.pdf
+!reports/relatorio_final_dengue_pb.pdf
+
 
